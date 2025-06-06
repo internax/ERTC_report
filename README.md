@@ -70,3 +70,38 @@ For every laboratory activity, the report must include (but is not limited to) t
   - Laboratory activity
   - Theoretical aspects discussed throughout the course
 
+---
+
+## Task Assignment
+
+### Dragos
+
+- Write content about your modeling and simulations
+- Write the theoretical section about the jaw controller
+- Describe our implementation approach
+- Create data flow diagrams (to be used in the presentation as well), include **physical units**  
+  → This tool is fine: [draw.io](https://www.drawio.com)
+- Add relevant code examples
+- Include measurements
+
+### Vlad
+
+- Describe the STM timer settings and our specific timer configuration
+- Final grammar check and ensure all requirements by the professor are met
+- Finish lab2 report (graphs, pictures)
+
+### Teo
+
+- Write the theory section about motor control
+- Optionally include simulation outputs if relevant
+- Describe our implementation approach
+- Create data flow diagrams (similar to jaw control), include **physical units**  
+  → This tool is fine: [draw.io](https://www.drawio.com)
+- Add relevant code examples
+- Include measurements
+- Prepare the final presentation slides
+
+### Marek
+
+- Describe the design process
+- Write the evaluation section 
