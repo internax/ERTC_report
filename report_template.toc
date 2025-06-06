@@ -1,0 +1,34 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}General notes}{2}{section.1}%
+\contentsline {paragraph}{}{2}{section*.3}%
+\contentsline {paragraph}{}{2}{section*.4}%
+\contentsline {section}{\numberline {2}Laboratory 1}{3}{section.2}%
+\contentsline {paragraph}{}{3}{section*.7}%
+\contentsline {subsection}{\numberline {2.1}SX1509 I/O expander}{3}{subsection.2.1}%
+\contentsline {paragraph}{}{3}{section*.9}%
+\contentsline {subsection}{\numberline {2.2}Line sensor}{4}{subsection.2.2}%
+\contentsline {paragraph}{}{4}{section*.11}%
+\contentsline {subsection}{\numberline {2.3}Keypad}{4}{subsection.2.3}%
+\contentsline {paragraph}{}{4}{section*.13}%
+\contentsline {subsection}{\numberline {2.4}Laboratory work}{5}{subsection.2.4}%
+\contentsline {paragraph}{Exercise 1 \& Exercise 2:}{5}{section*.15}%
+\contentsline {paragraph}{}{5}{section*.16}%
+\contentsline {paragraph}{}{5}{section*.17}%
+\contentsline {paragraph}{}{5}{section*.18}%
+\contentsline {paragraph}{Exercise 3:}{6}{section*.19}%
+\contentsline {paragraph}{}{6}{section*.20}%
+\contentsline {paragraph}{Exercise 4:}{6}{section*.21}%
+\contentsline {subsection}{\numberline {2.5}Conclusion}{6}{subsection.2.5}%
+\contentsline {paragraph}{}{6}{section*.22}%
+\contentsline {section}{\numberline {3}Laboratory 2}{6}{section.3}%
+\contentsline {paragraph}{}{6}{section*.23}%
+\contentsline {subsection}{\numberline {3.1}IMU Data Handling}{6}{subsection.3.1}%
+\contentsline {paragraph}{}{6}{section*.24}%
+\contentsline {subsection}{\numberline {3.2}Servo Control}{6}{subsection.3.2}%
+\contentsline {paragraph}{}{6}{section*.25}%
+\contentsline {subsection}{\numberline {3.3}Data Logging}{7}{subsection.3.3}%
+\contentsline {paragraph}{}{7}{section*.26}%
+\contentsline {subsection}{\numberline {3.4}Results}{7}{subsection.3.4}%
+\contentsline {paragraph}{}{7}{section*.27}%
+\contentsline {section}{\numberline {A}Section in the Appendix}{8}{appendix.A}%
+\contentsline {subsection}{\numberline {A.1}Subsection in the Appendix}{8}{subsection.A.1}%
