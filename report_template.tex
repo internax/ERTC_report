@@ -314,17 +314,29 @@ The aim of this laboratory was to implement an open-loop camera stabilization sy
     ,where $\theta_{gyro}$ and $\theta_{accel}$ are two different sensor measurements, from the gyroscope and accelerometer, respectively, thus ensuring a smoother pan.
     
 
-	\section{Laboratory 3}
-	\subsection{Design process}
-		\paragraph{}
-		We implemented motor controler pretty quickly and tested it out. Everything seems working
-		just fine, then we decided make final adjustments of the design. Somehow we changed
-		few things and computed error with wrong sign. This mistake take big amount of our time, because
-		we assumed that implementation is correct and it was working in some way anyway, but just 
-		sometimes which is worst kind of mistakes. We implemented jaw controler, but we were having
-		problems to tune it and then we found out the problem. Unfortunetly we didnt have enougt time 
-		in labs to tune the PID properly.
-	\section{Laboratory 4}
+\section{Laboratory 3}
+		\subsection{Design process}
+			\paragraph{}
+			We implemented the motor controller relatively quickly and tested it. 
+			Initially, everything seemed to work fine, so we proceeded with final design adjustments. 
+			Unfortunately, we introduced a small change that caused the error to be computed with the
+			wrong sign. This mistake cost us a significant amount of time, as we assumed the 
+			implementation was correct — and since it worked intermittently, it was even more misleading. 
+			We also implemented the jaw controller but struggled with tuning it properly. 
+			Eventually, we discovered the source of the issue. 
+			Unfortunately, we ran out of time during the lab session and were not able to tune the PID controller properly.
+\section{Laboratory 4}
+
+		\subsection{Design process}
+			\paragraph{}
+			At first, we tried to implement a simple approach, but it did not work as we expected.
+			The idea was to split the left and right side of the sensor into two separate arrays, 
+			giving us two values. Each value represented the occupancy of one half of the sensor. 
+			We then subtracted these values to get an error — ideally close to zero. 
+
+			In hindsight, our implementation may not have been flawed, the real issue was likely 
+			the motor control implementation. At the time, however, we assumed the problem was in our logic. 
+			We implemented the jaw controller, without major issues. It worked as expected.
 
 % \begin{figure}[!ht]
 % 	\centering
