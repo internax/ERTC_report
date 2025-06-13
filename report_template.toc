@@ -30,5 +30,9 @@
 \contentsline {paragraph}{}{7}{section*.26}%
 \contentsline {subsection}{\numberline {3.4}Results}{7}{subsection.3.4}%
 \contentsline {paragraph}{}{7}{section*.27}%
+\contentsline {section}{\numberline {4}Laboratory 3}{7}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Design process}{7}{subsection.4.1}%
+\contentsline {paragraph}{}{7}{section*.28}%
+\contentsline {section}{\numberline {5}Laboratory 4}{7}{section.5}%
 \contentsline {section}{\numberline {A}Section in the Appendix}{8}{appendix.A}%
 \contentsline {subsection}{\numberline {A.1}Subsection in the Appendix}{8}{subsection.A.1}%
