@@ -74,7 +74,7 @@ For every laboratory activity, the report must include (but is not limited to) t
 
 ## Task Assignment
 
-### Dragos
+### Dragos - jaw controler
 
 - Write content about your modeling and simulations
 - Write the theoretical section about the jaw controller
@@ -84,15 +84,15 @@ For every laboratory activity, the report must include (but is not limited to) t
 - Add relevant code examples
 - Include measurements
 
-### Vlad
+### Vlad - servo controler
 
 - Describe the STM timer settings and our specific timer configuration
 - Final grammar check and ensure all requirements by the professor are met
 - Finish lab2 report (graphs, pictures)
 
-### Teo
+### Teo - motor controler
 
-- Write the theory section about motor control
+- Write the theory section
 - Optionally include simulation outputs if relevant
 - Describe our implementation approach
 - Create data flow diagrams (similar to jaw control), include **physical units**  
@@ -101,7 +101,7 @@ For every laboratory activity, the report must include (but is not limited to) t
 - Include measurements
 - Prepare the final presentation slides
 
-### Marek
+### Marek - light sensor
 
 - Describe the design process
 - Write the evaluation section 
