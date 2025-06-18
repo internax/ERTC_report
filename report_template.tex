@@ -15,6 +15,8 @@
 \usepackage{fancyhdr}
 \usepackage{booktabs,array}
 \usepackage{hyperref}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows, positioning}
 
 \hyphenation{english}
 \makeatother
@@ -74,13 +76,20 @@
 \newpage
 
 \section{General notes}
-	\paragraph{}
-	This report was made as part of evaluation of course Embedded Real-Time Control at UNIPD.
-	In labs we were using and all development was done on device named TurtleBot (see picture \ref{fig:turtlebot}).
-	As software development tool was used STM32 CUBE IDE.
+    \paragraph{}
+    This report presents the development, implementation, and evaluation of several embedded control systems
+	for the TurtleBot platform. Over four laboratory sessions, we progressively implemented I2C communication,
+	sensor data handling, servo stabilization, PID motor speed control, and line-following navigation using 
+	a custom yaw controller. Each lab builds upon the previous work and introduces increasingly complex real-time
+	control tasks.
 
 	\paragraph{}
-	We are using microcontroller from STM32F7 series, part of STMicroelectronics' STM32 family, is based on the ARM Cortex-M7 core, operating at frequencies up to 216 MHz. 
+	This report was created as part of the evaluation for the Embedded Real-Time Control course at UNIPD.
+	All laboratory work and development were performed on a device named TurtleBot (see picture \ref{fig:turtlebot}).
+	STM32 CUBE IDE was used as the software development tool.
+
+	\paragraph{}
+	We use a microcontroller from the STM32F7 series, part of STMicroelectronics' STM32 family, based on the ARM Cortex-M7 core, operating at frequencies up to 216 MHz. 
 	It is designed for high-performance embedded applications that require substantial processing power combined with real-time capabilities. 
 	The STM32F7 features up to 2 MB of dual-bank Flash memory, up to 512 KB of SRAM (with additional TCM memory), and includes an integrated 
 	Floating Point Unit (FPU) and Digital Signal Processing (DSP) instructions for efficient signal processing tasks. Key peripherals include 
@@ -107,8 +116,8 @@
 \section{Laboratory 1} %todo: add screenshot from console.
 
 	\paragraph{}
-	Target of the first lab was to establish I2C communication between mcu STM32 and I/O expander SX1509. And to read
-	the data from the keypad and the line sensor with help of this expander. See configuration on picture \ref{fig.lab1.config}.
+	The goal of the first lab was to establish I2C communication between the STM32 MCU and the SX1509 I/O expander, and to read
+	data from the keypad and the line sensor with the help of this expander. See the configuration in picture \ref{fig.lab1.config}.
 
 	\begin{figure}[H]
 		\centering
@@ -120,9 +129,9 @@
 	\subsection{SX1509 I/O expander}
 
 		\paragraph{}
-		We are using 16-ch digital I/O expander SX1509 \cite{sx1509}. Device has two I/O banks, represented by two registers in device memory
-		of address 0x27 and 0x28. The I2C address of device is configurable by 2 address pins. Up to 4 devices could be at one line. 
-		We are using addresses 0x3E and 0x3F since we have 2 devices. Chip has built in debouncing, keypad engine and LED driver. See scheme on the pictre \ref{fig.lab1.sx1509}
+		We use a 16-channel digital I/O expander SX1509 \cite{sx1509}. The device has two I/O banks, represented by two registers in device memory
+		at addresses 0x27 and 0x28. The I2C address of the device is configurable by two address pins. Up to four devices can be on one line. 
+		We use addresses 0x3E and 0x3F since we have two devices. The chip has built-in debouncing, a keypad engine, and an LED driver. See the scheme in picture \ref{fig.lab1.sx1509}.
 
 		\begin{figure}[H]
 			\centering
@@ -134,8 +143,8 @@
 	\subsection{Line sensor}
 
 		\paragraph{}
-		TurtleBot has Pololu QTR sensor\cite{line_sensor} onboard, version with 8 channels and analog output. Each one of the outputs is connected to one of the
-		digital inputs of SX1509. Internal logic of expander converts signal to digital one when is voltage higher/lower than treshold. Order of bits coresponds to physical state of the sensor. Principle of sensor is shown on picture \ref{fig.lab1.line_sensor}.
+		The TurtleBot has a Pololu QTR sensor\cite{line_sensor} onboard, with 8 channels and analog output. Each output is connected to one of the
+		digital inputs of the SX1509. The internal logic of the expander converts the signal to digital when the voltage is higher/lower than a threshold. The order of bits corresponds to the physical state of the sensor. The principle of the sensor is shown in picture \ref{fig.lab1.line_sensor}.
 
 		\begin{figure}[H]
 			\centering
@@ -146,8 +155,8 @@
 		
 	\subsection{Keypad}
 		\paragraph{}
-		Classical 4x4 matrix keypad is used. Digital signal is connected to I/O expander. Rows are connected to the one bank (0x28) and colums (0x27) to the other one,
-		so four low bits of represents the keys. See keyboard configuration on picture \ref{fig.lab1.keypad}.
+		A classical 4x4 matrix keypad is used. The digital signal is connected to the I/O expander. Rows are connected to one bank (0x28) and columns (0x27) to the other,
+		so the four low bits represent the keys. See the keyboard configuration in picture \ref{fig.lab1.keypad}.
 
 		\begin{figure}[H]
 			\centering
@@ -188,9 +197,9 @@
 
 
 		\paragraph{Exercise 1 \& Exercise 2:}
-		Write an ISR that recognizes and correctly handles the keypad interrupts. You have to properly implement the
-		void HAL\_GPIO\_EXTI\_Callback(uint16\_t pin) function. Then print which interrupt has been triggered,i.e.,
-		the pin. To be able to receive another interrupt from the keypad, have to read the registers REG\_KEY\_DATA\_1
+		Write an ISR that recognizes and correctly handles keypad interrupts. You have to properly implement the
+		void HAL\_GPIO\_EXTI\_Callback(uint16\_t pin) function. Then print which interrupt has been triggered, i.e.,
+		the pin. To be able to receive another interrupt from the keypad, you have to read the registers REG\_KEY\_DATA\_1
 		and REG\_KEY\_DATA\_2 inside the ISR.
 
 		\paragraph{}
@@ -198,9 +207,9 @@
 		pressed.
 
 		\paragraph{}
-		We have implemented one callback function, for reading keypad data only when the button is pressed. We are returning
-		2 global variables. One for interupt pin number and one as flag, so we can execute appropriate part of code in main.
-		Then we calling function to read data from row and colums through I2C. See listing \ref{lst.lab1.callback}.
+		We have implemented one callback function for reading keypad data only when a button is pressed. We use
+		two global variables: one for the interrupt pin number and one as a flag, so we can execute the appropriate part of code in main.
+		Then we call a function to read data from rows and columns through I2C. See listing \ref{lst.lab1.callback}.
 
 		\begin{lstlisting}[language=C, caption={Keypad callback function}, label={lst.lab1.callback} ]
 	void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
@@ -216,9 +225,9 @@
 
 
 		\paragraph{}
-		To get character from the keypad, we need to decode the data we received from the expander. For that purpose we have two functions,
-		you can see in listing \ref{lst.lab1.keypad}. %In case of second function it would make sense to make it inline, since we only calling 
-		%char from array.
+		To get a character from the keypad, we need to decode the data we received from the expander. For that purpose, we have two functions,
+		as shown in listing \ref{lst.lab1.keypad}. %In the case of the second function, it would make sense to make it inline, since we are only calling 
+		%a char from an array.
 
 		\begin{lstlisting}[language=C, caption={Keypad get cahr functions}, label={lst.lab1.keypad} ]
 	uint8_t GetKeypadPosition(uint8_t data)
@@ -245,8 +254,8 @@
         polling period of 100ms.
 
 		\paragraph{}
-		We implemented function for reading data form the light sensor (see \ref{lst.lab1.line} ), and we calling this function by polling in main every 
-		100 ms. We basically just read device registers trough I2C.
+		We implemented a function for reading data from the light sensor (see \ref{lst.lab1.line}), and we call this function by polling in main every 
+		100 ms. We basically just read device registers through I2C.
 
 		\begin{lstlisting}[language=C, caption={Keypad get cahr functions}, label={lst.lab1.line} ]
 	void GetLightSensorStatus(uint8_t * data)
@@ -257,27 +266,27 @@
 		\end{lstlisting}
 
 		\paragraph{Exercise 4:}
-		We haven't saved LAB0, since it is not part final evaluation, so we can extend it, but since our LAB0 was working properly, it
-		is basically just changing LED delay based on keypad input. That means making a function that returns delay value based on input combination.
+		We haven't saved LAB0, since it is not part of the final evaluation, so we cannot extend it. However, our LAB0 was working properly; it
+		was basically just changing the LED delay based on keypad input. That means making a function that returns the delay value based on the input combination.
 
 	\subsection{Conclusion}
 	\paragraph{}
-	In this lab we establish I2C communication with two devices and successfully read data from these. We implemented keypad decoder, 
-	successfully read data from line sensor and haven't finished exercise 4, because we haven't saved lab0 on flash disk and were not able
-	to login to school comuputer for 20 minutes. At least we make theoretical description of the problem, since it is quite trivial. Some
-	of the functions are short so it would make sense to make them inline or not using function at all. We are not aiming for the most effective 
-	code and we prefer readability. Our code was not compiling with inline versions so we are using regular functions.
+	In this lab, we established I2C communication with two devices and successfully read data from them. We implemented a keypad decoder, 
+	successfully read data from the line sensor, and did not finish exercise 4 because we hadn't saved lab0 on the flash disk and were not able
+	to log in to the school computer for 20 minutes. At least we provided a theoretical description of the problem, since it is quite trivial. Some
+	of the functions are short, so it would make sense to make them inline or not use a function at all. We are not aiming for the most effective 
+	code and we prefer readability. Our code was not compiling with inline versions, so we are using regular functions.
 
 \section{Laboratory 2}
 \paragraph{}
-The aim of this laboratory was to implement an open-loop camera stabilization system on the TurtleBot using data from its IMU and controlling two servo motors to adjust the tilt and the pan of the camera. 
+The aim of this laboratory was to implement an open-loop camera stabilization system on the TurtleBot using data from its IMU and controlling two servo motors to adjust the tilt and pan of the camera. 
 
     \subsection{Timer Configuration}
     \paragraph{}
 
-    In order to get a 100Hz update frequency, we have the following timer configuration in place:
+    In order to achieve a 100 Hz update frequency, we have the following timer configuration in place:
     \begin{enumerate}
-        \item \textbf{Prescaler}: The prescaler is used to divide the input clock frequency of 96 MHz by 9600 in order to set the timer's counting frequency to 10kHz;
+        \item \textbf{Prescaler}: The prescaler is used to divide the input clock frequency of 96 MHz by 9600 in order to set the timer's counting frequency to 10 kHz;
         \item \textbf{Counter Period}: With the counter period of 100, we thus get the desired update frequency of $10kHz/101 \approx 100 Hz.$
     \end{enumerate}
 
@@ -290,7 +299,7 @@ The aim of this laboratory was to implement an open-loop camera stabilization sy
 
     \subsection{IMU Data Handling}
     \paragraph{}
-    The TurtleBot is equipped with a 6-DOF IMU, comprised of a 3-axis accelerometer and 3-axis gyroscope. The accelerometer measures the linear acceleration (m/$s^2$) along the 3 axes, while the gyroscope measures angular velocity (rad/s) around these axes. The data from the two sensors is available within
+    The TurtleBot is equipped with a 6-DOF IMU, consisting of a 3-axis accelerometer and a 3-axis gyroscope. The accelerometer measures the linear acceleration (m/$s^2$) along the three axes, while the gyroscope measures angular velocity (rad/s) around these axes. The data from the two sensors is available via
     
     \verb|bno055_convert_double_accel_xyz_msq()| and \verb|bno055_convert_double_gyro_xyz_rps()|, respectively.  The data provided by the IMU is crucial when estimating the movement and orientation of the robot, particularly for calculating the tilt as follows:
 
@@ -301,7 +310,7 @@ The aim of this laboratory was to implement an open-loop camera stabilization sy
 
     \subsection{Servo Control}
     \paragraph{}
-    The two servo motors controlling the movement are operated via PWM signals generated by TIM6 of the STM32 and the angles are updated with a frequency of 100Hz using the \verb|__HAL_TIM_PeriodElapsedCallback| function and scaled into a safe duty cycle with the \verb|saturate()| function. 
+    The two servo motors controlling the movement are operated via PWM signals generated by TIM6 of the STM32, and the angles are updated with a frequency of 100 Hz using the \verb|__HAL_TIM_PeriodElapsedCallback| function and scaled into a safe duty cycle with the \verb|saturate()| function. 
     \begin{lstlisting}[language=C, caption={Angle update function}, label={lst.lab1.line} ]
     TIM_HandleTypeDef * timer6_ptr = &htim6;
     HAL_TIM_PeriodElapsedCallback(timer6_ptr)
@@ -314,13 +323,13 @@ The aim of this laboratory was to implement an open-loop camera stabilization sy
     tilt = (int8_t)angle;
     }
     \end{lstlisting}
-    As can be seen in the code, there is a strange phenomenon where dividing the angle update formula by 10 ensures a smooth pan without the need of a filter. While this makes no sense time/frequency-wise (after having done the calculations multiple times), it does in the end provide a very smooth movement. The most probable reason is that, by reducing the amplitude of the response, some noise from the gyroscope is actually "filtered".
+    As can be seen in the code, there is a strange phenomenon where dividing the angle update formula by 10 ensures a smooth pan without the need for a filter. While this does not make sense time/frequency-wise (after having done the calculations multiple times), it does in the end provide a very smooth movement. The most probable reason is that, by reducing the amplitude of the response, some noise from the gyroscope is actually "filtered".
 
-    \subsection{Data Logging}
+    \subsection{Results}
     \paragraph{}
-    Data logging was performed via the UART interface of the STM32, while using MATLAB to receive and visualize the data in real time with the \verb|serial_datalog()| function. The plots for the yaw compensation and for the tilt compensation can be seen in Figure \ref{fig.lab2.yaw_plot} and Figure \ref{fig.lab2.tilt_plot}, respectively.
+    Data logging was performed via the UART interface of the STM32, while MATLAB was used to receive and visualize the data in real time with the \verb|serial_datalog()| function. The plots for the yaw compensation and for the tilt compensation can be seen in Figure \ref{fig.lab2.yaw_plot} and Figure \ref{fig.lab2.tilt_plot}, respectively.
 	\paragraph{}
-	The data from graphs \ref{fig.lab2.yaw_plot} and \ref{fig.lab2.tilt_plot} was obtained by moving the TurtleBot according to the Figure \ref{fig.lab2.yaw_camera}(data for the yaw movement) and Figure \ref{fig.lab2.tilt_camera}(data for the tilt movement), respectively.
+	The data from graphs \ref{fig.lab2.yaw_plot} and \ref{fig.lab2.tilt_plot} was obtained by moving the TurtleBot according to Figure \ref{fig.lab2.yaw_camera} (data for the yaw movement) and Figure \ref{fig.lab2.tilt_camera} (data for the tilt movement), respectively.
 
     	\begin{figure}[H]
 			\centering
@@ -332,7 +341,7 @@ The aim of this laboratory was to implement an open-loop camera stabilization sy
 		\begin{figure}[H]
 				\centering
 				\includegraphics[width=0.8\textwidth]{figures/camera_yaw_bun.jpg}
-				\caption{Yaw response behaviour.}
+				\caption{Yaw movement performed during test.}
 				\label{fig.lab2.yaw_camera}
 		\end{figure}
 
@@ -346,43 +355,245 @@ The aim of this laboratory was to implement an open-loop camera stabilization sy
         \begin{figure}[H]
 			\centering
 			\includegraphics[width=0.8\textwidth]{figures/camera_tilt_bun.jpg}
-			\caption{Tilt response behaviour.}
+			\caption{Tilt movement performed during test.}
 			\label{fig.lab2.tilt_camera}
 		\end{figure}
 
-    \subsection{Results}
     \textbf{Lab video demonstration:}:\href{https://youtube.com/shorts/imY0JJ4vP6Q?feature=share}{Video Demonstration}
     \paragraph{}
-    The camera stabilization performance was captured and logged while the TurtleBot was tilted manually. As seen in the video, the servo effectively counteracts the tilt to maintain camera alignment, without the need of a complementary filter. In the event of a less fortunate camera setup, the complementary filter would have had the following form:
+    The camera stabilization performance was captured and logged while the TurtleBot was tilted manually. As seen in the video, the servo effectively counteracts the tilt to maintain camera alignment, without the need for a complementary filter. In the event of a less optimal camera setup, the complementary filter would have had the following form:
     \begin{equation}
         \theta_{fused} = \alpha \cdot\theta_{gyro} + (1 - \alpha) \theta_{accel}
     \end{equation},
     where $\theta_{gyro}$ and $\theta_{accel}$ are two different sensor measurements, from the gyroscope and accelerometer, respectively, thus ensuring a smoother pan.
     
 
+
 \section{Laboratory 3}
+         \paragraph{}
+            In this lab, the task was to implement a PI controller to regulate the speed of the robot’s motors. The main objective was to get the wheels to follow a reference value as closely as possible while observing how the controller performed in practice.
 		\subsection{Design process}
 			\paragraph{}
 			We implemented the motor controller relatively quickly and tested it. 
 			Initially, everything seemed to work fine, so we proceeded with final design adjustments. 
 			Unfortunately, we introduced a small change that caused the error to be computed with the
 			wrong sign. This mistake cost us a significant amount of time, as we assumed the 
-			implementation was correct — and since it worked intermittently, it was even more misleading. 
-			We also implemented the jaw controller but struggled with tuning it properly. 
+			implementation was correct—and since it worked intermittently, it was even more misleading. 
+			We also implemented the yaw controller but struggled with tuning it properly. 
 			Eventually, we discovered the source of the issue. 
 			Unfortunately, we ran out of time during the lab session and were not able to tune the PID controller properly.
+
+        \subsection{Theoretical background}
+            \paragraph{}
+            	A DC motor changes its speed depending on the voltage we apply and the load it experiences. In order to keep the speed at a set value, we need a feedback controller designed to work properly even when conditions change.
+            \begin{figure}[H]
+				\centering
+				\includegraphics[width=0.7\textwidth]{figures/system_model.png}
+				\caption{System model}
+				\label{fig:system_model}
+            \end{figure}
+            \paragraph{}
+            The motor can be easily described by using two equations, one for the mechanical part and another for the electrical side, as follows:
+            
+            \textbf{Electrical:} From Kirchhoff’s Voltage Law (KVL) applied to the armature circuit
+\begin{align}
+    V_a(t) &= R_a i_a(t) + L_a \frac{di_a(t)}{dt} + V_b(t) \\
+    &= R_a i_a(t) + L_a \frac{di_a(t)}{dt} + K_b \omega(t),
+\end{align}
+
+\textbf{Mechanical:} From Newton’s second law applied to the rotor
+\begin{align}
+    J \frac{d\omega(t)}{dt} &= T_m(t) - b \omega(t) \\
+    &= K_t i_a(t) - b \omega(t),
+\end{align}
+where $V_a(t)$ is the armature voltage (input voltage) [V], 
+$i_a(t)$ is the armature current [A], 
+$R_a$ is the armature resistance [$\Omega$], 
+$L_a$ is the armature inductance [H], 
+$V_b(t)$ is the back EMF (Electromotive Force) [V], 
+$K_b$ is the back EMF constant [V/(rad/s)], 
+$\omega(t)$ is the angular velocity of the rotor [rad/s], 
+$T_m(t)$ is the motor torque developed by the motor [Nm], 
+$K_t$ is the torque constant [Nm/A], 
+$J$ is the moment of inertia of rotor and load [kg$\cdot$m$^2$], 
+and $b$ is the viscous friction coefficient (damping) [Nm/(rad/s)].
+
+\paragraph{}
+By using the Laplace transform and considering $K = K_t = K_b$, we get the motor's transfer function:
+
+\begin{equation}
+    G(s) = \frac{\Omega(s)}{V_a(s)} = \frac{K}{L_a J s^2 + (R_a J + L_a b)s + (R_a b + K^2)}
+    \label{eq:full_tf}
+\end{equation}
+
+\paragraph{}
+Considering the fact that the effects of the inductance are not significant compared to other time constants, the model can be simplified to a first-order approximation.
+
+\paragraph{}
+In our experiment, the transfer function used for tuning the controller had the form:
+
+\begin{equation}
+    P(s) = \frac{\mu}{1 + T s} \cdot e^{-\tau s}
+    \label{eq:approx_tf}
+\end{equation}
+
+with $\mu = 3.552$, $T = 0.217$, $\tau = 0.2$. These values represent the system gain, time constant, and a small time delay.
+
+\paragraph{}
+The PWM (Pulse Width Modulation) signal allows us to adjust the motor speed by changing the voltage applied. In this way, the duty cycle varies, the voltage change is not done directly, and speed control is smooth.
+
+\subsection{Timer Configuration}
+    \paragraph{}
+
+    In order to achieve a 100 Hz update frequency, we have the following timer configuration in place:
+    \begin{enumerate}
+        \item \textbf{Prescaler}: The prescaler is used to divide the input clock frequency of 96 MHz by 9600 in order to set the timer's counting frequency to 10 kHz;
+        \item \textbf{Counter Period}: With the counter period of 100, we thus get the desired update frequency of $10kHz/101 \approx 100 Hz.$
+    \end{enumerate}
+	\paragraph{}
+		We use oversampling for reading, so we used a 100 Hz reading frequency, then we oversample 10x so the control loop is running at 10 Hz.
+
+        \begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\textwidth]{figures/timer_config.jpg}
+			\caption{TIM7 Configuration.}
+			\label{fig.lab2.timer_config}
+		\end{figure}
+
+\subsection{Implementation}
+\paragraph{}
+From the beginning, we wanted to see and understand how the motor responds in real life and what exactly our controller should do. We used data logging functions in order to receive real values from the system, and once it became clear what we had to control and what exactly our target was in terms of results, we started working on the STM32 board.
+\paragraph{}
+Logic:
+\begin{itemize}[label=--]
+    \item implement new \textbf{struct} types, such as
+    \begin{itemize}[label=$\bullet$]
+        \item $motor\_attributes\_t$ 
+        \item $pid\_attributes$ - stores PID parameters
+        \item $turtle\_bot\_attributes\_t$
+    \end{itemize}
+    \item Encoder reading and speed calculation:
+    \begin{itemize}[label=$\bullet$]
+        \item $getSpeed()$ - reads from the encoder and calculates angular speed
+        \item $speedRecountToRs()$ and $speedRecountToMs()$ - convert values from the encoder
+    \end{itemize}
+    \item PID controller logic: $pidRecount()$ - creates the PID
+    \item PWM duty cycle:
+    \begin{itemize}[label=$\bullet$]
+        \item $recountDuty()$ - converts the controller output into a PWM value
+        \item $updateMotorSpeedFC()$ and $updateMotorSpeedFB()$ - apply duty cycle to the motor
+    \end{itemize}
+\end{itemize}
+
+\paragraph{}
+The first thing we did was create a structure where we defined the PID controller's parameters. It consists of the proportional, integral, and derivative gain, error terms, and the output. It is important to note that we had to create two instances of this structure, one for the left wheel and one for the right wheel. 
+
+
+\begin{lstlisting}[language=C, caption={PID calculation function}, breaklines=true]
+void pidRecount(pid_attributes_t * pid_attributes, motor_attributes_t * motor_attributes)
+{
+	pid_attributes->error_previous = pid_attributes->error;
+	pid_attributes->error =  motor_attributes->wheel_set_speed - motor_attributes->wheel_read_speed;
+
+	pid_attributes->derivation = pid_attributes->error - pid_attributes->error_previous;
+
+  if(( pid_attributes->integration +100 < 3000) && (pid_attributes->integration -100 > -3000))
+    pid_attributes->integration += pid_attributes->error;
+
+  double integral_part = (TS/pid_attributes->Ti)*pid_attributes->integration;
+  
+  double derivate_part = (pid_attributes->Td/TS)*pid_attributes->derivation;
+  
+  pid_attributes->output = pid_attributes->Kr*(pid_attributes->error + derivate_part + integral_part);
+
+}
+
+\end{lstlisting}
+
+\paragraph{}
+The function \textbf{pidRecount} computes the PID controller, which updates after each timer interrupt. The proportional, integral, and derivative gains for the controller were chosen by experimenting, which means different values were tested on the system until we obtained a satisfactory set of parameters. This set ensures good performance in terms of tracking the reference, as required in the task. Inside $HAL_TIM_PeriodElapsedCallback$, control operations such as PID calculation and PWM update are performed periodically.
+
+\paragraph{}
+The \textbf{Forward/Brake} driving method was implemented in order to manage the behavior of the motor. The logic is as follows: the motor rotates forward when the PID output is positive, but if the output is negative, the motor stops.
+
+\begin{lstlisting}[language=C, caption={Fragment from the implementation of Forward/Brake method}, label={lst:forward_brake_logging}]
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+    // ... 
+    if(htim->Instance == TIM6)
+    {
+        data.w1 = motor_attributes_right.wheel_set_speed;
+        data.w2 = motor_attributes_left.wheel_set_speed;
+        data.u1 = line_folower_attributes.distance_from_center;
+        data.u2 = pid_attributes_jaw.output;
+
+        ertc_dlog_send(&logger, &data, sizeof(data));
+        //...
+    }
+    //...
+    updateMotorSpeedFB(&motor_attributes_left, pid_attributes_left.output);
+    updateMotorSpeedFB(&motor_attributes_right, pid_attributes_right.output);
+    //...
+}
+\end{lstlisting}
+
+\paragraph{}
+Exercise $2$ required us to implement the controller using the Forward/Coast method and make a comparison between its results and those from the Forward/Brake case. Unfortunately, due to time constraints, we were not able to finish this task, and we were not able to properly tune and test the PID controller during the lab. In other words, a direct comparison of the results could not be performed; this remains a task for future work.
+
+\subsection{Controller design}
+\paragraph{}
+Initially, we considered the PI controller approach for this lab, as specified in the laboratory instructions. However, during the implementation, we adopted a PID controller structure to allow for flexible tuning and potentially improved performance.
+
+\subsection{Results}
+\paragraph{}
+This section presents the results of the experiment. 
+To provide a concrete example, we plotted the data collected from the
+left motor after we implemented the PID on the robot. The recorded values 
+represent the measured angular speed over time and are used to analyze 
+the system's closed-loop response. 
+\paragraph{}
+We used the following parameters:
+\begin{itemize}
+	\item Ti = 0.1
+	\item Td = 0
+	\item Kr = 2
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/left_motor.png}
+    \caption{Step response recorded from the left motor}
+    \label{fig:left_motor_step}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/left_motor_pid.png}
+    \caption{Step response recorded from the left motor PID output}
+    \label{fig:left_motor_step_pid}
+\end{figure}
+
+Figure \ref{fig:left_motor_step} shows the step response of the left DC motor, and \ref{fig:left_motor_step_pid} shows the output of the PID. The reference value for the angular speed was set to $30 \text{ rad/s}$, and the controller was tasked with tracking this reference as closely as possible. As can be seen from the plot, after the input is applied, the speed increases to an overshoot of $23\%$. The speed then decreases and oscillates around the reference before settling near the desired value. The collected data allows us to analyze the controller's performance, but further tuning might be needed to fully eliminate the oscillatory behavior.
+
+\subsection{Conclusions}
+\paragraph{}
+Our implementation was good—the controller was able to track the reference—but there is room for improvement. Different tuning might allow us to get rid of the oscillations, but the main goals were achieved.
+
+\paragraph{}
+To sum up, the implementation managed to get the job done—most of the time, at least. The controller was able to track the speed reference, even though it sometimes took the scenic route before settling down. There’s definitely room for improvement, especially in terms of tuning and getting rid of those small oscillations, but the main goals were achieved. All in all, this lab was a hands-on way to see what actually happens when you go from theory to code, and then to a real motor that doesn’t always behave exactly as expected. Next time, maybe we’ll have more time to fine-tune the controller—and maybe even make that Forward/Coast experiment work as well.
+		
 \section{Laboratory 4}
 
-		\subsection{Design process}
+		\subsection{Design process} \label{lab4_design}
 			\paragraph{}
 			At first, we tried to implement a simple approach, but it did not work as we expected.
-			The idea was to split the left and right side of the sensor into two separate arrays, 
+			The idea was to split the left and right sides of the sensor into two separate arrays, 
 			giving us two values. Each value represented the occupancy of one half of the sensor. 
-			We then subtracted these values to get an error — ideally close to zero. 
+			We then subtracted these values to get an error—ideally close to zero. 
 
-			In hindsight, our implementation may not have been flawed, the real issue was likely 
+			In hindsight, our implementation may not have been flawed; the real issue was likely 
 			the motor control implementation. At the time, however, we assumed the problem was in our logic. 
-			We implemented the jaw controller, without major issues. It worked as expected.
+			We implemented the yaw controller without major issues. It worked as expected.
 
         \subsection{Error definition}
             \paragraph{}
@@ -398,13 +609,13 @@ The aim of this laboratory was to implement an open-loop camera stabilization sy
 			\label{fig.lab4.yaw_error}
 		\end{figure}
 
-        As shown in the picture, the error that the yaw controller is receiving is made from the difference between the reference and the current error. We want that the error to be minimal.
-        It is also possible to rewrite the equation stated above with respect to the error of followin the line, namely ${e_{esl}}$.
+        As shown in the picture, the error that the yaw controller receives is calculated as the difference between the reference and the current value. We want this error to be minimal.
+        It is also possible to rewrite the equation stated above with respect to the error of following the line, namely ${e_{esl}}$.
 
         \begin{equation}
             \psi_{err} = arctan(\frac{e_{esl}}{H})
         \end{equation}
-        , where H is the distance between the line sensor and the vehicle’s center, equal to 0.085 m and $e_{esl}$ is defined as:
+        where $H$ is the distance between the line sensor and the vehicle’s center, equal to 0.085 m, and $e_{esl}$ is defined as:
 
         \begin{equation}
     e_{esl} = 
@@ -415,12 +626,12 @@ The aim of this laboratory was to implement an open-loop camera stabilization sy
     \end{cases}
     \end{equation}
 
-    Therefore, using basic mathematical knowledge, the arcatan(x) is not needed when the value of x is close to 0 (zero). In conclusion, we can define the yaw error as follows:
+    Therefore, using basic mathematical knowledge, the arctan(x) is not needed when the value of x is close to 0 (zero). In conclusion, we can define the yaw error as follows:
     \begin{equation}
         \psi_{err} = \frac{e_{esl}}{H};
     \end{equation}
 
-    We implemented the yaw erorr by as follows:
+    We implemented the yaw error as follows:
 
     \begin{lstlisting}[language=C, caption={Yaw error}, label={lst.lab4.yaw_error} ]
     
@@ -438,7 +649,7 @@ The aim of this laboratory was to implement an open-loop camera stabilization sy
 			\caption{Yaw controller}
 			\label{fig.lab4.yaw_controller}
 		\end{figure}
-    For the controller, namely $C_{\psi}$, is multiplied by the error that we have defined above. Taken this into consideration, we will define the controller of the yaw by implementing a proportional (P) control. The value of the yaw controller is defined by the variable $K_r$.
+    For the controller, namely $C_{\psi}$, it is multiplied by the error that we have defined above. Taking this into consideration, we defined the yaw controller by implementing a proportional (P) control. The value of the yaw controller is defined by the variable $K_r$.
 
     \begin{lstlisting}[language=C, caption={Yaw controller}, label={lst.lab4.yaw_controller} ]
     
@@ -446,7 +657,7 @@ The aim of this laboratory was to implement an open-loop camera stabilization sy
 
     \end{lstlisting}
 
-    With everythind defined, we can introduce the Simulink model implemented by us:
+    With everything defined, we can introduce the Simulink model we implemented:
 
     \begin{figure}[H]
 			\centering
@@ -455,25 +666,25 @@ The aim of this laboratory was to implement an open-loop camera stabilization sy
 			\label{fig.lab4.simulink}
 		\end{figure}
 
-    We can clearly see both the PID-s that are intended for controlling both of the wheels speeds. In the efforts of finding the suitable PID for both of the wheels such that the overall error is minimal, I implemented a metaheuristic method using the Matlab implemented function, namely PSO.
-    PSO stands for Particle Swarm Optimization and it is a method in which we can find the parameters of both the PID-s and the yaw controller gain by running the simulation multiple times and placing particles all over the search space.
+    We can clearly see both the PIDs that are intended for controlling the speeds of both wheels. In the effort to find a suitable PID for both wheels such that the overall error is minimal, we implemented a metaheuristic method using the MATLAB function PSO.
+    PSO stands for Particle Swarm Optimization, and it is a method in which we can find the parameters of both the PIDs and the yaw controller gain by running the simulation multiple times and placing particles throughout the search space.
 
-    The particles have unique attributes, such as :
+    The particles have unique attributes, such as:
     \begin{enumerate}
-        \item they have knowledge of their position in the search space
-        \item they have knowledge of the swarms position in the search space
-        \item they have knowledge of their value
-        \item they have knowledge of the swarms values
+        \item knowledge of their position in the search space
+        \item knowledge of the swarm's position in the search space
+        \item knowledge of their value
+        \item knowledge of the swarm's values
     \end{enumerate}
 
-    The goal of this metaheuristic is to find the global optimal value that satisfies the condition given by the user. The condition given is that we want the overall error to be minimal. This can be described as :
+    The goal of this metaheuristic is to find the global optimal value that satisfies the condition given by the user. The condition given is that we want the overall error to be minimal. This can be described as:
     \begin{equation}
         J = \| \psi_{error} \|;
     \end{equation}
 
-    In this way, the goal of the algorithm is to move the particles in the search space at every iteration, then the particles, by running the simulation with the values obtained in that iteration, obtain an output that is being normalized for easier comparison. In the end, after multiple iterations, the particles should gather in a small area which in the end is the global maximum value, namely the minimal error found in the designated search space.
+    In this way, the goal of the algorithm is to move the particles in the search space at every iteration. Then, by running the simulation with the values obtained in that iteration, the particles obtain an output that is normalized for easier comparison. In the end, after multiple iterations, the particles should gather in a small area, which in the end is the global optimum value, namely the minimal error found in the designated search space.
 
-    For the algorithm to work properly, I have implemented different intervals that the values should take. Therefore, we can run the same algorithm, but with multiple choices, building multiple configurations.
+    For the algorithm to work properly, we implemented different intervals that the values should take. Therefore, we can run the same algorithm with multiple choices, building multiple configurations.
 
     The preset configurations are :
     \begin{enumerate}
@@ -579,61 +790,163 @@ The aim of this laboratory was to implement an open-loop camera stabilization sy
 			\label{fig.lab4.output}
 		\end{figure}
 
-    As we can see, the output perfectly tracks the the step reference with these values. Taking this into account, we call it a success in tracking the step reference. Although, by testing these values on the bot, we could not get the results that we were hoping for. I think this is to the fact that the reference is different or the sensor does not read as the simulation intends.
-
-		\subsection{Design process}
-			\paragraph{}
-			At first, we tried to implement a simple approach, but it did not work as we expected.
-			The idea was to split the left and right side of the sensor into two separate arrays, 
-			giving us two values. Each value represented the occupancy of one half of the sensor. 
-			We then subtracted these values to get an error — ideally close to zero. 
-
-			In hindsight, our implementation may not have been flawed, the real issue was likely 
-			the motor control implementation. At the time, however, we assumed the problem was in our logic. 
-			We implemented the jaw controller, without major issues. It worked as expected.
-
-% \begin{figure}[!ht]
-% 	\centering
-% 	\subfloat[The TurtleBot 1 ]
-% 	{\includegraphics[width=0.3\textwidth,height=0.45\textwidth]{figures/turtlebot_1.jpg}
-% 		\label{fig:tbot1}}
-% 	\subfloat[The TurtleBot 2]
-% 	{\includegraphics[width=0.3\textwidth,height=0.5\textwidth]{figures/turtlebot_2.jpg}
-% 		\label{fig:tbot2}}
-% 	\caption{The TurtleBot}
-% \end{figure}
-
-% \subsection{Another subsection}
-
-% Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.
-
-% \subsection{Another subsection}
-
-% \begin{lstlisting}[language=C, caption={C code using listings}, label={lst:label} ]
-% #include <stdio.h>
-% int main()
-% {
-% 	// print hello to the console
-% 	printf("Hello, world!");
-% 	return 0;
-% }
-% \end{lstlisting}
-
-% See code~\ref{lst:label}.
+    As we can see, the output perfectly tracks the step reference with these values. Taking this into account, we consider it a success in tracking the step reference. However, when testing these values on the bot, we could not get the results we were hoping for. This is likely due to the reference being different or the sensor not reading as the simulation intends. 
 
 
+    \subsection{Graphs of the Jaw Controller}
+
+    Going through the simulations, we have gathered data from the rover. We can present the graph for the yaw controller implemented. We have the following graphs:
+
+    \begin{figure}[H]
+			\centering
+			\includegraphics[width=0.8\textwidth]{figures/jaw_Controller_speed.png}
+			\caption{Jaw set speed}
+			\label{fig.lab4.setspeed}
+		\end{figure}
+
+    The graph illustrates how the yaw controller adjusts the set speed values for the left and right wheels during the line-following task. Periods where both wheel speeds are nearly equal correspond to straight movement along the trajectory. Large differences between the set speeds indicate turning maneuvers or significant corrections, where the robot pivots or curves to realign itself with the path.
+    Sudden jumps and rapid changes in the set speed values correspond to moments of intense correction, possibly due to sharp turns or deviations from the line. Such behavior may also suggest that the controller parameters could be further tuned for smoother motion.
 
 
-\clearpage
-\appendix
+    The graph contains the following:
+    \begin{enumerate}
+        \item X-axis: time, expressed in s/100 (tenths of a second) \
+        \item Y-axis: wheel speed, measured in revolutions per minute (RPM)\
+        \item Set speed right (blue): set speed for the right wheel (RPM) \
+        \item Set speed left (orange): set speed for the left wheel (RPM)
+    \end{enumerate}
 
-\section{Section in the Appendix}
-\label{sec:app1}
+    \begin{figure}[H]
+			\centering
+			\includegraphics[width=0.8\textwidth]{figures/jaw_error.png}
+			\caption{Jaw error}
+			\label{fig.lab4.setspeed}
+		\end{figure}
 
-\subsection{Subsection in the Appendix}
-\label{subsec:app2}
+The figure above illustrates the yaw error evolution over time during the robot’s line-following task. The graph shows several intervals where the yaw error spikes to approximately 0.025 m (2.5 cm), corresponding to moments when the robot deviates more significantly from the trajectory. Between these events, the error returns to values close to zero, indicating the controller’s ability to correct the robot’s position. Prolonged intervals of low error indicate good tracking performance, while the spikes suggest moments of trajectory correction or challenging segments in the path.
 
-Additional relevant information...
+Overall, the yaw controller is effective at minimizing lateral deviation most of the time, but further tuning may be required to reduce the amplitude or frequency of these error spikes, thus achieving smoother and more robust path following.
+
+
+    The graph contains the following:
+    \begin{enumerate}
+    \item X-axis: Time, measured in hundredths of a second ([s/100]), spanning from 0 to 1000 (0 to 10 seconds).\
+    \item Y-axis: Lateral error (pitch [m]), representing the distance from the center of the line in meters, ranging from 0 to 0.025 m.
+    \end{enumerate}
+
+
+    \section{Describing the code}
+
+
+    \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[node distance=2cm, every node/.style={font=\footnotesize}]
+
+    % Styles
+    \tikzstyle{startstop} = [rectangle, rounded corners, minimum width=2cm, minimum height=0.8
+    cm, text centered, draw=black, fill=orange!20]
+    \tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=2.5cm, minimum height=1cm, text centered, draw=black, fill=blue!15]
+    \tikzstyle{process} = [rectangle, minimum width=2.5cm, minimum height=1cm, text centered, draw=black, fill=green!15]
+    \tikzstyle{decision} = [diamond, aspect=2, minimum width=2.5cm, minimum height=1cm, text centered, draw=black, fill=yellow!15]
+    \tikzstyle{arrow} = [thick,->,>=stealth]
+
+   \node (start) [startstop] {Start\ \texttt{main()}};
+\node (init) [process, below of=start] {\parbox{4cm}{Initialization: Peripherals, Timers, UARTs, Motors, Sensors}};
+\node (setpid) [process, below of=init] {\parbox{3.5cm}{Set PID Parameters and Initial Speed}};
+\node (loop) [startstop, below of=setpid] {Main Loop\ \texttt{while(1)}};
+\node (log) [process, below of=loop] {Log Data:\ \texttt{ertc\_dlog\_update()}};
+
+% TIM7 Interrupt
+\node (tim7) [io, right=2cm of loop] {TIM7 Interrupt};
+\node (read_sensor) [process, below of=tim7, yshift=0.6cm] {\parbox{4cm}{Read Line Sensors, Get Wheel Speeds}};
+\node (oversample) [process, below of=read_sensor, yshift=0.5cm] {\parbox{4cm}{Sensor Accumulation and Oversampling}};
+\node (compute) [process, below of=oversample, yshift=0.5cm] {\parbox{4cm}{Compute Distance from Center, Jaw Error, Angular Velocity, PID Output}};
+\node (updatewheels) [process, below of=compute, yshift=0.5cm] {Update Wheel Set Speeds};
+\node (updatepid) [process, below of=updatewheels, yshift=0.5cm] {PID Recount for Motors};
+\node (motorctrl) [process, below of=updatepid, yshift=0.5cm] {Update Motor PWM Duty Cycle};
+
+% TIM6 Interrupt
+\node (tim6) [io, left=2cm of loop] {TIM6 Interrupt};
+\node (logdata) [process, below of=tim6, yshift=0.6cm] {Prepare Data Log Packet};
+\node (sendlog) [process, below of=logdata, yshift=0.5cm] {Send Data via UART};
+    % (main loop doesn't end, so no stop node)
+
+    % Arrows (Main sequence)
+    \draw [arrow] (start) -- (init);
+    \draw [arrow] (init) -- (setpid);
+    \draw [arrow] (setpid) -- (loop);
+    \draw [arrow] (loop) -- (log);
+    \draw [arrow] (log) -- ++(0, -1) -- ++(0, 1.5) -| (loop);
+
+    % TIM7 interrupts
+    \draw [arrow] (loop) -- (tim7);
+    \draw [arrow] (tim7) -- (read_sensor);
+    \draw [arrow] (read_sensor) -- (oversample);
+    \draw [arrow] (oversample) -- (compute);
+    \draw [arrow] (compute) -- (updatewheels);
+    \draw [arrow] (updatewheels) -- (updatepid);
+    \draw [arrow] (updatepid) -- (motorctrl);
+    % Loop for periodic execution
+    \draw [arrow] (motorctrl.east) -| ++(1.2,0) |- (tim7);
+
+    % TIM6 interrupts
+    \draw [arrow] (loop) -- (tim6);
+    \draw [arrow] (tim6) -- (logdata);
+    \draw [arrow] (logdata) -- (sendlog);
+    \draw [arrow] (sendlog.west) -| ++(-1.2,0) |- (tim6);
+
+    % Optional: Label interrupts as "ISR"
+    \node[above=0.1cm] at (tim7.north) {\textbf{ISR}};
+    \node[above=0.1cm] at (tim6.north) {\textbf{ISR}};
+
+    \end{tikzpicture}
+    \caption{General flow chart for the main structure of the TurtleBot embedded software.}
+    \label{fig:flowchart_turtlebot}
+\end{figure}
+
+This flowchart represents how the code works. We can further expand this chart by summarizing what each node does in particular. Taking this into consideration, we can define the starting points of the program as follows:
+\begin{enumerate}
+    \item \textbf{Start main()}: This node represents the program entry point. The function main() is called automatically when the controller starts.\
+    \item \textbf{Initialization: Peripherals, Timers, UARTs, Motors, Sensors}: Here, all hardware peripherals are initialized.\
+    \item \textbf{Set PID parameters and Initial Speed}: The PID controller constants ($K_r$, $T_i$, $T_d$) for both wheels and the yaw controller are set. The initial desired speed of the robot is also set.\
+    \item \textbf{Main loop}: The main loop only updates the data logger.\
+    \item \textbf{Log Data: $ertc^{dlog}_{update()}$}: Within the main loop, this function is called to update the state of the data logger, handling any data transmission or storage as needed.\
+\end{enumerate}
+
+After the main loop is triggered, the program enters two different interrupts: TIM6 and TIM7. We can define TIM6 as follows:
+\begin{enumerate}
+    \item \textbf{TIM6 Interrupt}: This node represents the TIM6 interrupt service routine (ISR), which is triggered periodically based on the timer’s configuration. It is used for periodic logging and status signaling.\
+    \item \textbf{Prepare Data Log Packet}: The relevant control and sensor variables are packed into a data structure (struct datalog) for transmission or storage.\
+    \item \textbf{Send Data via UART}: The prepared data log packet is transmitted over UART, allowing monitoring or recording of the robot’s behavior.
+\end{enumerate}
+
+For TIM7 we have the following:
+\begin{enumerate}
+    \item \textbf{TIM7 Interrupt}: This node is the TIM7 interrupt service routine, also triggered at a regular interval. It handles the core control logic and sensor updates for the robot.\
+    \item \textbf{Read Line Sensors, Get Wheel Speeds}: The robot reads the line sensor values and gets the current wheel speeds.\
+    \item \textbf{Sensor Accumulation and Oversampling}: Multiple readings from the line sensors are accumulated and processed (oversampling) to reduce noise and improve accuracy.\
+    \item \textbf{Compute Distance from Center, Yaw error, Angular Velocity, PID Output}: The robot calculates how far it is from the center of the line, computes the yaw tracking error, estimates the robot’s angular velocity, and calculates the output of the yaw PID controller.\
+    \item \textbf{Update Wheel Set Speeds}: Using the yaw PID output and the current speed setpoint, new set speeds are assigned to the left and right wheels to steer the robot appropriately.\
+    \item \textbf{PID Recount}: Each wheel’s PID controller updates its output, based on the difference between the desired and measured wheel speeds.\
+    \item \textbf{Update Motor PWM Duty Cycle}: The computed PID outputs are used to update the PWM signals sent to the motor drivers, controlling the actual speed of each wheel.
+\end{enumerate}
+
+In summary, this flowchart provides a clear overview of the software architecture, highlighting the separation of concerns between control and logging, and illustrating how periodic tasks are efficiently managed using timer-based interrupts in an embedded system context.
+
+\section{Conclusion}
+\paragraph{}
+We implemented a functional yaw controller for the TurtleBot. As a demonstration, we have a video of the robot
+finishing one loop of the test track. Since we faced the troubles described in \ref{lab4_design}, we lost some time,
+which we missed for tuning the robot in the end. That means that we had room to improve the performance of our robot.
+
+\section{Used tools}
+\begin{itemize}
+	\item STM32cubeIDE - flashing
+	\item MATLAB - simulation, logging
+	\item Visual Studio Code - code development, final report
+	\item Python - graphs
+	\item Github - \href{https://github.com/internax/ERTC_report}{repository here}
+\end{itemize}
 
 
 \begin{thebibliography}{1}

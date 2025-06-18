@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.14)  18 JUN 2025 17:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.14)  18 JUN 2025 18:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -352,29 +352,59 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
 )
 \Hy@SectionHShift=\skip72
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count303
-\lst@gtempboxa=\box57
-\lst@token=\toks38
-\lst@length=\count304
-\lst@currlwidth=\dimen188
-\lst@column=\count305
-\lst@pos=\count306
-\lst@lostspace=\dimen189
-\lst@width=\dimen190
-\lst@newlines=\count307
-\lst@lineno=\count308
-\lst@maxwidth=\dimen191
- (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count309
-\lst@skipnumbers=\count310
-\lst@framebox=\box58
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/listings.cfg
-File: listings.cfg 2020/03/24 1.8d listings configuration
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks38
+\pgfutil@tempdima=\dimen188
+\pgfutil@tempdimb=\dimen189
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex)) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box57
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2021/05/15 v3.1.9a (3.1.9a)
 ))
-Package: listings 2020/03/24 1.8d (Carsten Heinz)
- (/usr/local/texlive/2022/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: pgf 2021/05/15 v3.1.9a (3.1.9a)
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks39
+\pgfkeys@temptoks=\toks40
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
+\pgfkeys@tmptoks=\toks41
+))
+\pgf@x=\dimen190
+\pgf@y=\dimen191
+\pgf@xa=\dimen192
+\pgf@ya=\dimen193
+\pgf@xb=\dimen194
+\pgf@yb=\dimen195
+\pgf@xc=\dimen196
+\pgf@yc=\dimen197
+\pgf@xd=\dimen198
+\pgf@yd=\dimen199
+\w@pgf@writea=\write3
+\r@pgf@reada=\read3
+\c@pgf@counta=\count303
+\c@pgf@countb=\count304
+\c@pgf@countc=\count305
+\c@pgf@countd=\count306
+\t@pgf@toka=\toks42
+\t@pgf@tokb=\toks43
+\t@pgf@tokc=\toks44
+\pgf@sys@id@count=\count307
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
+)
+Driver file for pgf: pgfsys-pdftex.def
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2021/05/15 v3.1.9a (3.1.9a)
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
+))) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfsyssoftpath@smallbuffer@items=\count308
+\pgfsyssoftpath@bigbuffer@items=\count309
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)) (/usr/local/texlive/2022/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
  (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
@@ -389,50 +419,215 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen256
+\pgfmath@count=\count310
+\pgfmath@box=\box58
+\pgfmath@toks=\toks45
+\pgfmath@stack@operand=\toks46
+\pgfmath@stack@operation=\toks47
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex))) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count311
+)) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@picminx=\dimen257
+\pgf@picmaxx=\dimen258
+\pgf@picminy=\dimen259
+\pgf@picmaxy=\dimen260
+\pgf@pathminx=\dimen261
+\pgf@pathmaxx=\dimen262
+\pgf@pathminy=\dimen263
+\pgf@pathmaxy=\dimen264
+\pgf@xx=\dimen265
+\pgf@xy=\dimen266
+\pgf@yx=\dimen267
+\pgf@yy=\dimen268
+\pgf@zx=\dimen269
+\pgf@zy=\dimen270
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@path@lastx=\dimen271
+\pgf@path@lasty=\dimen272
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@shorten@end@additional=\dimen273
+\pgf@shorten@start@additional=\dimen274
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfpic=\box59
+\pgf@hbox=\box60
+\pgf@layerbox@main=\box61
+\pgf@picture@serial@count=\count312
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgflinewidth=\dimen275
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@pt@x=\dimen276
+\pgf@pt@y=\dimen277
+\pgf@pt@temp=\dimen278
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfarrowsep=\dimen279
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@max=\dimen280
+\pgf@sys@shading@range@num=\count313
+\pgf@shadingcount=\count314
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfexternal@startupbox=\box62
+)) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfnodeparttextbox=\box63
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@nodesepstart=\dimen281
+\pgf@nodesepend=\dimen282
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2021/05/15 v3.1.9a (3.1.9a)
+)) (/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen283
+\pgffor@skip=\dimen284
+\pgffor@stack=\toks48
+\pgffor@toks=\toks49
+)) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@plot@mark@count=\count315
+\pgfplotmarksize=\dimen285
+)
+\tikz@lastx=\dimen286
+\tikz@lasty=\dimen287
+\tikz@lastxsaved=\dimen288
+\tikz@lastysaved=\dimen289
+\tikz@lastmovetox=\dimen290
+\tikz@lastmovetoy=\dimen291
+\tikzleveldistance=\dimen292
+\tikzsiblingdistance=\dimen293
+\tikz@figbox=\box64
+\tikz@figbox@bg=\box65
+\tikz@tempbox=\box66
+\tikz@tempbox@bg=\box67
+\tikztreelevel=\count316
+\tikznumberofchildren=\count317
+\tikznumberofcurrentchild=\count318
+\tikz@fig@count=\count319
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfmatrixcurrentrow=\count320
+\pgfmatrixcurrentcolumn=\count321
+\pgf@matrix@numberofcolumns=\count322
+)
+\tikz@expandcount=\count323
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+ (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
+File: pgflibraryarrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\arrowsize=\dimen294
+)) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count324
+\lst@gtempboxa=\box68
+\lst@token=\toks50
+\lst@length=\count325
+\lst@currlwidth=\dimen295
+\lst@column=\count326
+\lst@pos=\count327
+\lst@lostspace=\dimen296
+\lst@width=\dimen297
+\lst@newlines=\count328
+\lst@lineno=\count329
+\lst@maxwidth=\dimen298
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count330
+\lst@skipnumbers=\count331
+\lst@framebox=\box69
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count311
-\l__pdf_internal_box=\box59
+\l__color_backend_stack_int=\count332
+\l__pdf_internal_box=\box70
 ) (/Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/report_template.aux
 
 LaTeX Warning: Label `lst.lab1.line' multiply defined.
 
+
+LaTeX Warning: Label `fig.lab2.timer_config' multiply defined.
+
+
+LaTeX Warning: Label `fig.lab4.setspeed' multiply defined.
+
 )
 \openout1 = `report_template.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 ) (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count312
-\scratchdimen=\dimen192
-\scratchbox=\box60
-\nofMPsegments=\count313
-\nofMParguments=\count314
-\everyMPshowfont=\toks39
-\MPscratchCnt=\count315
-\MPscratchDim=\dimen193
-\MPnumerator=\count316
-\makeMPintoPDFobject=\count317
-\everyMPtoPDFconversion=\toks40
+\scratchcounter=\count333
+\scratchdimen=\dimen299
+\scratchbox=\box71
+\nofMPsegments=\count334
+\nofMParguments=\count335
+\everyMPshowfont=\toks51
+\MPscratchCnt=\count336
+\MPscratchDim=\dimen300
+\MPnumerator=\count337
+\makeMPintoPDFobject=\count338
+\everyMPtoPDFconversion=\toks52
 )
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -473,7 +668,7 @@ Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 40.
+Package hyperref Info: Link coloring OFF on input line 42.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/local/texlive/2022/texmf-dist/tex/latex/refcount/refcount.sty
@@ -481,172 +676,224 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/local/texlive/2022/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count318
+\c@section@level=\count339
 )
-LaTeX Info: Redefining \ref on input line 40.
-LaTeX Info: Redefining \pageref on input line 40.
-LaTeX Info: Redefining \nameref on input line 40.
+LaTeX Info: Redefining \ref on input line 42.
+LaTeX Info: Redefining \pageref on input line 42.
+LaTeX Info: Redefining \nameref on input line 42.
  (/Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/report_template.out) (/Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/report_template.out)
-\@outlinefile=\write3
-\openout3 = `report_template.out'.
+\@outlinefile=\write4
+\openout4 = `report_template.out'.
 
-\c@lstlisting=\count319
-<figures/unipd-logo.png, id=92, 399.4925pt x 401.5pt>
+\c@lstlisting=\count340
+<figures/unipd-logo.png, id=119, 399.4925pt x 401.5pt>
 File: figures/unipd-logo.png Graphic file (type png)
 <use figures/unipd-logo.png>
-Package pdftex.def Info: figures/unipd-logo.png  used on input line 58.
+Package pdftex.def Info: figures/unipd-logo.png  used on input line 60.
 (pdftex.def)             Requested size: 227.62204pt x 228.76547pt.
  [1
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/unipd-logo.png>] (/Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/report_template.toc)
-\tf@toc=\write4
-\openout4 = `report_template.toc'.
+\tf@toc=\write5
+\openout5 = `report_template.toc'.
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.74 \newpage
+l.76 \newpage
               [1] (/usr/local/texlive/2022/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
-<figures/turtlebot_1.jpg, id=132, 1842.885pt x 3276.24pt>
+<figures/turtlebot_1.jpg, id=165, 1842.885pt x 3276.24pt>
 File: figures/turtlebot_1.jpg Graphic file (type jpg)
 <use figures/turtlebot_1.jpg>
-Package pdftex.def Info: figures/turtlebot_1.jpg  used on input line 96.
+Package pdftex.def Info: figures/turtlebot_1.jpg  used on input line 105.
 (pdftex.def)             Requested size: 241.84843pt x 429.92546pt.
-<figures/cube_ide.png, id=133, 1630.09pt x 995.72pt>
+ [2]
+<figures/cube_ide.png, id=176, 1630.09pt x 995.72pt>
 File: figures/cube_ide.png Graphic file (type png)
 <use figures/cube_ide.png>
-Package pdftex.def Info: figures/cube_ide.png  used on input line 103.
+Package pdftex.def Info: figures/cube_ide.png  used on input line 112.
 (pdftex.def)             Requested size: 483.69687pt x 295.4517pt.
- [2 </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/turtlebot_1.jpg>]
+ [3 </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/turtlebot_1.jpg>]
 
 pdfTeX warning: pdflatex (file /Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/config_stm_lab1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figures/config_stm_lab1.pdf, id=143, 349.305pt x 151.5261pt>
+<figures/config_stm_lab1.pdf, id=182, 349.305pt x 151.5261pt>
 File: figures/config_stm_lab1.pdf Graphic file (type pdf)
 <use figures/config_stm_lab1.pdf>
-Package pdftex.def Info: figures/config_stm_lab1.pdf  used on input line 115.
+Package pdftex.def Info: figures/config_stm_lab1.pdf  used on input line 124.
 (pdftex.def)             Requested size: 386.95897pt x 167.86993pt.
-<figures/sx1509.png, id=146, 433.62pt x 403.5075pt>
+<figures/sx1509.png, id=185, 433.62pt x 403.5075pt>
 File: figures/sx1509.png Graphic file (type png)
 <use figures/sx1509.png>
-Package pdftex.def Info: figures/sx1509.png  used on input line 129.
+Package pdftex.def Info: figures/sx1509.png  used on input line 138.
 (pdftex.def)             Requested size: 290.22107pt x 270.07771pt.
-[3 </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/cube_ide.png> </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/config_stm_lab1.pdf>]
-<figures/line_sensor.png, id=171, 396.48125pt x 510.90875pt>
+[4 </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/cube_ide.png> </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/config_stm_lab1.pdf>]
+<figures/line_sensor.png, id=209, 396.48125pt x 510.90875pt>
 File: figures/line_sensor.png Graphic file (type png)
 <use figures/line_sensor.png>
-Package pdftex.def Info: figures/line_sensor.png  used on input line 142.
+Package pdftex.def Info: figures/line_sensor.png  used on input line 151.
 (pdftex.def)             Requested size: 145.11053pt x 186.99077pt.
-<figures/keypad.png, id=173, 249.93375pt x 231.86626pt>
+<figures/keypad.png, id=211, 249.93375pt x 231.86626pt>
 File: figures/keypad.png Graphic file (type png)
 <use figures/keypad.png>
-Package pdftex.def Info: figures/keypad.png  used on input line 154.
+Package pdftex.def Info: figures/keypad.png  used on input line 163.
 (pdftex.def)             Requested size: 193.47578pt x 179.49635pt.
- [4 </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/sx1509.png> </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/line_sensor.png>] (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
+ [5 </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/sx1509.png> </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/line_sensor.png>] (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 )
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 205.
- [5 </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/keypad.png>]
-Overfull \hbox (7.02365pt too wide) in paragraph at lines 281--282
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 214.
+ [6 </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/keypad.png>]
+Overfull \hbox (7.02365pt too wide) in paragraph at lines 290--291
 []\T1/cmr/bx/n/10 Counter Pe-riod\T1/cmr/m/n/10 : With the counter pe-riod of 100, we thus get the de-sired up-date fre-quency of $\OT1/cmr/m/n/10 10\OML/cmm/m/it/10 kHz=\OT1/cmr/m/n/10 101 \OMS/cmsy/m/n/10 ^^Y
  []
 
-<figures/timer_config.jpg, id=221, 483.8075pt x 153.57375pt>
+<figures/timer_config.jpg, id=260, 483.8075pt x 153.57375pt>
 File: figures/timer_config.jpg Graphic file (type jpg)
 <use figures/timer_config.jpg>
-Package pdftex.def Info: figures/timer_config.jpg  used on input line 286.
+Package pdftex.def Info: figures/timer_config.jpg  used on input line 295.
 (pdftex.def)             Requested size: 338.58632pt x 107.47978pt.
-[6 </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/timer_config.jpg>]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 295.
+[7 </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/timer_config.jpg>]
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 304.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-<figures/plot_yaw_1.png, id=257, 792.9625pt x 360.34625pt>
+<figures/plot_yaw_1.png, id=295, 796.9775pt x 359.3425pt>
 File: figures/plot_yaw_1.png Graphic file (type png)
 <use figures/plot_yaw_1.png>
-Package pdftex.def Info: figures/plot_yaw_1.png  used on input line 327.
-(pdftex.def)             Requested size: 386.95897pt x 175.8509pt.
-<figures/camera_yaw_bun.jpg, id=258, 9106.02pt x 4047.12pt>
+Package pdftex.def Info: figures/plot_yaw_1.png  used on input line 336.
+(pdftex.def)             Requested size: 386.95897pt x 174.47281pt.
+<figures/camera_yaw_bun.jpg, id=296, 9106.02pt x 4047.12pt>
 File: figures/camera_yaw_bun.jpg Graphic file (type jpg)
 <use figures/camera_yaw_bun.jpg>
-Package pdftex.def Info: figures/camera_yaw_bun.jpg  used on input line 334.
+Package pdftex.def Info: figures/camera_yaw_bun.jpg  used on input line 343.
 (pdftex.def)             Requested size: 386.95897pt x 171.92313pt.
- [7 </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/plot_yaw_1.png>]
-<figures/plot_tilt.png, id=287, 801.99625pt x 363.3575pt>
+ [8 </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/plot_yaw_1.png>]
+<figures/plot_tilt.png, id=325, 803.0pt x 363.3575pt>
 File: figures/plot_tilt.png Graphic file (type png)
 <use figures/plot_tilt.png>
-Package pdftex.def Info: figures/plot_tilt.png  used on input line 341.
-(pdftex.def)             Requested size: 386.95897pt x 175.31888pt.
-<figures/camera_tilt_bun.jpg, id=288, 9106.02pt x 4047.12pt>
+Package pdftex.def Info: figures/plot_tilt.png  used on input line 350.
+(pdftex.def)             Requested size: 386.95897pt x 175.10266pt.
+<figures/camera_tilt_bun.jpg, id=326, 9106.02pt x 4047.12pt>
 File: figures/camera_tilt_bun.jpg Graphic file (type jpg)
 <use figures/camera_tilt_bun.jpg>
-Package pdftex.def Info: figures/camera_tilt_bun.jpg  used on input line 348.
+Package pdftex.def Info: figures/camera_tilt_bun.jpg  used on input line 357.
 (pdftex.def)             Requested size: 386.95897pt x 171.92313pt.
- [8 </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/camera_yaw_bun.jpg> </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/plot_tilt.png> </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/camera_tilt_bun.jpg>] (/usr/local/texlive/2022/texmf-dist/tex/latex/ucs/data/uni-32.def
+ [9 </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/camera_yaw_bun.jpg> </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/plot_tilt.png> </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/camera_tilt_bun.jpg>] (/usr/local/texlive/2022/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 )
-<figures/yaw_error.png, id=296, 432.86719pt x 329.73187pt>
+<figures/system_model.png, id=335, 731.73375pt x 322.806pt>
+File: figures/system_model.png Graphic file (type png)
+<use figures/system_model.png>
+Package pdftex.def Info: figures/system_model.png  used on input line 391.
+(pdftex.def)             Requested size: 338.58632pt x 149.36931pt.
+ [10 </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/system_model.png>]
+Overfull \hbox (7.02365pt too wide) in paragraph at lines 451--452
+[]\T1/cmr/bx/n/10 Counter Pe-riod\T1/cmr/m/n/10 : With the counter pe-riod of 100, we thus get the de-sired up-date fre-quency of $\OT1/cmr/m/n/10 10\OML/cmm/m/it/10 kHz=\OT1/cmr/m/n/10 101 \OMS/cmsy/m/n/10 ^^Y
+ []
+
+File: figures/timer_config.jpg Graphic file (type jpg)
+<use figures/timer_config.jpg>
+Package pdftex.def Info: figures/timer_config.jpg  used on input line 458.
+(pdftex.def)             Requested size: 338.58632pt x 107.47978pt.
+[11] [12]
+<figures/left_motor.png, id=409, 809.0225pt x 364.36125pt>
+File: figures/left_motor.png Graphic file (type png)
+<use figures/left_motor.png>
+Package pdftex.def Info: figures/left_motor.png  used on input line 564.
+(pdftex.def)             Requested size: 386.95897pt x 174.27983pt.
+<figures/left_motor_pid.png, id=410, 801.99625pt x 359.3425pt>
+File: figures/left_motor_pid.png Graphic file (type png)
+<use figures/left_motor_pid.png>
+Package pdftex.def Info: figures/left_motor_pid.png  used on input line 571.
+(pdftex.def)             Requested size: 386.95897pt x 173.38167pt.
+ [13 </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/left_motor.png>]
+<figures/yaw_error.png, id=427, 432.86719pt x 329.73187pt>
 File: figures/yaw_error.png Graphic file (type png)
 <use figures/yaw_error.png>
-Package pdftex.def Info: figures/yaw_error.png  used on input line 396.
+Package pdftex.def Info: figures/yaw_error.png  used on input line 607.
 (pdftex.def)             Requested size: 193.47578pt x 147.37672pt.
- [9 </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/yaw_error.png>]
-Overfull \hbox (62.174pt too wide) in paragraph at lines 427--429
+ [14 </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/left_motor_pid.png>]
+Overfull \hbox (62.174pt too wide) in paragraph at lines 638--640
 [][][][][][][][][][][][][][][][][][] 
  []
 
-<figures/yaw_scheme.png, id=309, 614.295pt x 212.29312pt>
+<figures/yaw_scheme.png, id=439, 614.295pt x 212.29312pt>
 File: figures/yaw_scheme.png Graphic file (type png)
 <use figures/yaw_scheme.png>
-Package pdftex.def Info: figures/yaw_scheme.png  used on input line 437.
+Package pdftex.def Info: figures/yaw_scheme.png  used on input line 648.
 (pdftex.def)             Requested size: 386.95897pt x 133.72917pt.
-<figures/schema_sim.png, id=310, 1368.61313pt x 603.75563pt>
+[15 </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/yaw_error.png> </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/yaw_scheme.png>]
+<figures/schema_sim.png, id=455, 1368.61313pt x 603.75563pt>
 File: figures/schema_sim.png Graphic file (type png)
 <use figures/schema_sim.png>
-Package pdftex.def Info: figures/schema_sim.png  used on input line 453.
+Package pdftex.def Info: figures/schema_sim.png  used on input line 664.
 (pdftex.def)             Requested size: 483.69687pt x 213.38124pt.
-[10 </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/yaw_scheme.png>] [11 </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/schema_sim.png>]
-<figures/track_PSO.png, id=345, 1443.14156pt x 700.86844pt>
+ [16 </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/schema_sim.png>]
+<figures/track_PSO.png, id=475, 1443.14156pt x 700.86844pt>
 File: figures/track_PSO.png Graphic file (type png)
 <use figures/track_PSO.png>
-Package pdftex.def Info: figures/track_PSO.png  used on input line 577.
+Package pdftex.def Info: figures/track_PSO.png  used on input line 788.
 (pdftex.def)             Requested size: 386.95897pt x 187.9216pt.
- [12 </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/track_PSO.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 642--643
+<figures/jaw_Controller_speed.png, id=476, 682.80093pt x 341.77687pt>
+File: figures/jaw_Controller_speed.png Graphic file (type png)
+<use figures/jaw_Controller_speed.png>
+Package pdftex.def Info: figures/jaw_Controller_speed.png  used on input line 802.
+(pdftex.def)             Requested size: 386.95897pt x 193.69359pt.
+ [17 </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/track_PSO.png>]
+<figures/jaw_error.png, id=493, 687.31781pt x 343.2825pt>
+File: figures/jaw_error.png Graphic file (type png)
+<use figures/jaw_error.png>
+Package pdftex.def Info: figures/jaw_error.png  used on input line 821.
+(pdftex.def)             Requested size: 386.95897pt x 193.26353pt.
+ [18 </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/jaw_Controller_speed.png> </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/jaw_error.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 854--854
+[]\T1/cmr/m/n/8 Initialization: Pe-riph-er-als,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 862--862
+[]\T1/cmr/m/n/8 Sensor Ac-cu-mu-la-tion and
+ []
+
+
+Overfull \hbox (37.44481pt too wide) in paragraph at lines 902--903
+ [][] 
+ []
+
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 955--956
 []\T1/cmr/m/n/10 SX1507/SX1508/SX1509. 2025. \T1/cmr/m/it/10 Spark-fun \T1/cmr/m/n/10 [on-line]. [ac-cessed 2025-4-22]. Avail-able at:
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 645--646
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 958--959
 []\T1/cmr/m/n/10 Pololu line sen-sor. 2025. \T1/cmr/m/it/10 Pololu.com \T1/cmr/m/n/10 [on-line]. [ac-cessed 2025-4-22]. Avail-able at:
  []
 
-[13
-
-] (/Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/report_template.aux)
+[21] (/Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/report_template.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `report_template.out' has not changed.
-(rerunfilecheck)             Checksum: B6B3D6DB86ACFD94B1E201A1CB47429C;2853.
+(rerunfilecheck)             Checksum: 27696C824E3D440286ECD7ECEDB3F41D;3587.
  ) 
 Here is how much of TeX's memory you used:
- 16250 strings out of 478268
- 257024 string characters out of 5846347
- 761948 words of memory out of 5000000
- 34080 multiletter control sequences out of 15000+600000
- 477203 words of font info for 41 fonts, out of 8000000 for 9000
+ 27736 strings out of 478268
+ 513214 string characters out of 5846347
+ 1057008 words of memory out of 5000000
+ 45219 multiletter control sequences out of 15000+600000
+ 481329 words of font info for 52 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
- 69i,9n,79p,614b,1859s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on "/Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/report_template.pdf" (14 pages, 4588343 bytes).
+ 84i,9n,89p,842b,1861s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx0800.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on "/Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/report_template.pdf" (22 pages, 5038718 bytes).
 PDF statistics:
- 470 PDF objects out of 1000 (max. 8388607)
- 390 compressed objects within 4 object streams
- 159 named destinations out of 1000 (max. 500000)
- 257 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 684 PDF objects out of 1000 (max. 8388607)
+ 578 compressed objects within 6 object streams
+ 267 named destinations out of 1000 (max. 500000)
+ 342 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -2,47 +2,74 @@
 \contentsline {section}{\numberline {1}General notes}{2}{section.1}%
 \contentsline {paragraph}{}{2}{section*.3}%
 \contentsline {paragraph}{}{2}{section*.4}%
-\contentsline {section}{\numberline {2}Laboratory 1}{3}{section.2}%
-\contentsline {paragraph}{}{3}{section*.7}%
-\contentsline {subsection}{\numberline {2.1}SX1509 I/O expander}{3}{subsection.2.1}%
-\contentsline {paragraph}{}{3}{section*.9}%
-\contentsline {subsection}{\numberline {2.2}Line sensor}{4}{subsection.2.2}%
-\contentsline {paragraph}{}{4}{section*.11}%
-\contentsline {subsection}{\numberline {2.3}Keypad}{4}{subsection.2.3}%
-\contentsline {paragraph}{}{4}{section*.13}%
-\contentsline {subsection}{\numberline {2.4}Laboratory work}{5}{subsection.2.4}%
-\contentsline {paragraph}{Exercise 1 \& Exercise 2:}{5}{section*.15}%
-\contentsline {paragraph}{}{5}{section*.16}%
-\contentsline {paragraph}{}{5}{section*.17}%
-\contentsline {paragraph}{}{5}{section*.18}%
-\contentsline {paragraph}{Exercise 3:}{6}{section*.19}%
-\contentsline {paragraph}{}{6}{section*.20}%
-\contentsline {paragraph}{Exercise 4:}{6}{section*.21}%
-\contentsline {subsection}{\numberline {2.5}Conclusion}{6}{subsection.2.5}%
-\contentsline {paragraph}{}{6}{section*.22}%
-\contentsline {section}{\numberline {3}Laboratory 2}{6}{section.3}%
-\contentsline {paragraph}{}{6}{section*.23}%
-\contentsline {subsection}{\numberline {3.1}Timer Configuration}{6}{subsection.3.1}%
-\contentsline {paragraph}{}{6}{section*.24}%
-\contentsline {subsection}{\numberline {3.2}IMU Data Handling}{7}{subsection.3.2}%
-\contentsline {paragraph}{}{7}{section*.26}%
-\contentsline {subsection}{\numberline {3.3}Servo Control}{7}{subsection.3.3}%
-\contentsline {paragraph}{}{7}{section*.27}%
-\contentsline {subsection}{\numberline {3.4}Data Logging}{7}{subsection.3.4}%
-\contentsline {paragraph}{}{7}{section*.28}%
-\contentsline {paragraph}{}{7}{section*.29}%
-\contentsline {subsection}{\numberline {3.5}Results}{8}{subsection.3.5}%
-\contentsline {paragraph}{}{8}{section*.34}%
-\contentsline {section}{\numberline {4}Laboratory 3}{9}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Design process}{9}{subsection.4.1}%
+\contentsline {paragraph}{}{2}{section*.5}%
+\contentsline {section}{\numberline {2}Laboratory 1}{4}{section.2}%
+\contentsline {paragraph}{}{4}{section*.8}%
+\contentsline {subsection}{\numberline {2.1}SX1509 I/O expander}{4}{subsection.2.1}%
+\contentsline {paragraph}{}{4}{section*.10}%
+\contentsline {subsection}{\numberline {2.2}Line sensor}{5}{subsection.2.2}%
+\contentsline {paragraph}{}{5}{section*.12}%
+\contentsline {subsection}{\numberline {2.3}Keypad}{5}{subsection.2.3}%
+\contentsline {paragraph}{}{5}{section*.14}%
+\contentsline {subsection}{\numberline {2.4}Laboratory work}{6}{subsection.2.4}%
+\contentsline {paragraph}{Exercise 1 \& Exercise 2:}{6}{section*.16}%
+\contentsline {paragraph}{}{6}{section*.17}%
+\contentsline {paragraph}{}{6}{section*.18}%
+\contentsline {paragraph}{}{6}{section*.19}%
+\contentsline {paragraph}{Exercise 3:}{7}{section*.20}%
+\contentsline {paragraph}{}{7}{section*.21}%
+\contentsline {paragraph}{Exercise 4:}{7}{section*.22}%
+\contentsline {subsection}{\numberline {2.5}Conclusion}{7}{subsection.2.5}%
+\contentsline {paragraph}{}{7}{section*.23}%
+\contentsline {section}{\numberline {3}Laboratory 2}{7}{section.3}%
+\contentsline {paragraph}{}{7}{section*.24}%
+\contentsline {subsection}{\numberline {3.1}Timer Configuration}{7}{subsection.3.1}%
+\contentsline {paragraph}{}{7}{section*.25}%
+\contentsline {subsection}{\numberline {3.2}IMU Data Handling}{8}{subsection.3.2}%
+\contentsline {paragraph}{}{8}{section*.27}%
+\contentsline {subsection}{\numberline {3.3}Servo Control}{8}{subsection.3.3}%
+\contentsline {paragraph}{}{8}{section*.28}%
+\contentsline {subsection}{\numberline {3.4}Results}{8}{subsection.3.4}%
+\contentsline {paragraph}{}{8}{section*.29}%
+\contentsline {paragraph}{}{8}{section*.30}%
 \contentsline {paragraph}{}{9}{section*.35}%
-\contentsline {section}{\numberline {5}Laboratory 4}{9}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Design process}{9}{subsection.5.1}%
-\contentsline {paragraph}{}{9}{section*.36}%
-\contentsline {subsection}{\numberline {5.2}Error definition}{9}{subsection.5.2}%
-\contentsline {paragraph}{}{9}{section*.37}%
-\contentsline {subsection}{\numberline {5.3}Yaw controller Design}{10}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Design process}{12}{subsection.5.4}%
-\contentsline {paragraph}{}{12}{section*.42}%
-\contentsline {section}{\numberline {A}Section in the Appendix}{13}{appendix.A}%
-\contentsline {subsection}{\numberline {A.1}Subsection in the Appendix}{13}{subsection.A.1}%
+\contentsline {section}{\numberline {4}Laboratory 3}{10}{section.4}%
+\contentsline {paragraph}{}{10}{section*.36}%
+\contentsline {subsection}{\numberline {4.1}Design process}{10}{subsection.4.1}%
+\contentsline {paragraph}{}{10}{section*.37}%
+\contentsline {subsection}{\numberline {4.2}Theoretical background}{10}{subsection.4.2}%
+\contentsline {paragraph}{}{10}{section*.38}%
+\contentsline {paragraph}{}{10}{section*.40}%
+\contentsline {paragraph}{}{11}{section*.41}%
+\contentsline {paragraph}{}{11}{section*.42}%
+\contentsline {paragraph}{}{11}{section*.43}%
+\contentsline {paragraph}{}{11}{section*.44}%
+\contentsline {subsection}{\numberline {4.3}Timer Configuration}{11}{subsection.4.3}%
+\contentsline {paragraph}{}{11}{section*.45}%
+\contentsline {paragraph}{}{11}{section*.46}%
+\contentsline {subsection}{\numberline {4.4}Implementation}{11}{subsection.4.4}%
+\contentsline {paragraph}{}{11}{section*.48}%
+\contentsline {paragraph}{}{11}{section*.49}%
+\contentsline {paragraph}{}{12}{section*.50}%
+\contentsline {paragraph}{}{12}{section*.51}%
+\contentsline {paragraph}{}{12}{section*.52}%
+\contentsline {paragraph}{}{13}{section*.53}%
+\contentsline {subsection}{\numberline {4.5}Controller design}{13}{subsection.4.5}%
+\contentsline {paragraph}{}{13}{section*.54}%
+\contentsline {subsection}{\numberline {4.6}Results}{13}{subsection.4.6}%
+\contentsline {paragraph}{}{13}{section*.55}%
+\contentsline {paragraph}{}{13}{section*.56}%
+\contentsline {subsection}{\numberline {4.7}Conclusions}{14}{subsection.4.7}%
+\contentsline {paragraph}{}{14}{section*.59}%
+\contentsline {paragraph}{}{14}{section*.60}%
+\contentsline {section}{\numberline {5}Laboratory 4}{14}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Design process}{14}{subsection.5.1}%
+\contentsline {paragraph}{}{14}{section*.61}%
+\contentsline {subsection}{\numberline {5.2}Error definition}{14}{subsection.5.2}%
+\contentsline {paragraph}{}{14}{section*.62}%
+\contentsline {subsection}{\numberline {5.3}Yaw controller Design}{15}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Graphs of the Jaw Controller}{17}{subsection.5.4}%
+\contentsline {section}{\numberline {6}Describing the code}{19}{section.6}%
+\contentsline {section}{\numberline {7}Conclusion}{20}{section.7}%
+\contentsline {paragraph}{}{20}{section*.70}%
+\contentsline {section}{\numberline {8}Used tools}{20}{section.8}%
