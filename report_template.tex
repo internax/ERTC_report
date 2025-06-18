@@ -283,7 +283,7 @@ The aim of this laboratory was to implement an open-loop camera stabilization sy
 
         		\begin{figure}[H]
 			\centering
-			\includegraphics[width=0.9\textwidth]{figures/timer_config.jpg}
+			\includegraphics[width=0.7\textwidth]{figures/timer_config.jpg}
 			\caption{TIM6 Configuration.}
 			\label{fig.lab2.timer_config}
 		\end{figure}
@@ -319,36 +319,36 @@ The aim of this laboratory was to implement an open-loop camera stabilization sy
     \subsection{Data Logging}
     \paragraph{}
     Data logging was performed via the UART interface of the STM32, while using MATLAB to receive and visualize the data in real time with the \verb|serial_datalog()| function. The plots for the yaw compensation and for the tilt compensation can be seen in Figure \ref{fig.lab2.yaw_plot} and Figure \ref{fig.lab2.tilt_plot}, respectively.
+	\paragraph{}
+	The data from graphs \ref{fig.lab2.yaw_plot} and \ref{fig.lab2.tilt_plot} was obtained by moving the TurtleBot according to the Figure \ref{fig.lab2.yaw_camera}(data for the yaw movement) and Figure \ref{fig.lab2.tilt_camera}(data for the tilt movement), respectively.
 
-    		\begin{figure}[H]
+    	\begin{figure}[H]
 			\centering
-			\includegraphics[width=0.9\textwidth]{figures/plot_yaw_1.png}
+			\includegraphics[width=1\textwidth]{figures/plot_yaw_1.png}
 			\caption{Yaw response behaviour.}
 			\label{fig.lab2.yaw_plot}
 		\end{figure}
+		
+		\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.8\textwidth]{figures/camera_yaw_bun.jpg}
+				\caption{Yaw response behaviour.}
+				\label{fig.lab2.yaw_camera}
+		\end{figure}
 
-            \begin{figure}[H]
+        \begin{figure}[H]
 			\centering
 			\includegraphics[width=0.9\textwidth]{figures/plot_tilt.png}
 			\caption{Tilt response behaviour.}
 			\label{fig.lab2.tilt_plot}
 		\end{figure}
 
-    The data above was obtained by moving the TurtleBot according to the Figure \ref{fig.lab2.yaw_camera}(data for the yaw movement) and Figure \ref{fig.lab2.tilt_camera}(data for the tilt movement), respectively.
-
-    % \begin{figure}[H]
-	% 		\centering
-	% 		\includegraphics[width=0.9\textwidth]{figures/camera_yaw.jpg}
-	% 		\caption{Yaw response behaviour.}
-	% 		\label{fig.lab2.yaw_camera}
-	% 	\end{figure}
-
-    %         \begin{figure}[H]
-	% 		\centering
-	% 		\includegraphics[width=0.9\textwidth]{figures/camera_tilt.jpg}
-	% 		\caption{Tilt response behaviour.}
-	% 		\label{fig.lab2.tilt_camera}
-	% 	\end{figure}
+        \begin{figure}[H]
+			\centering
+			\includegraphics[width=0.8\textwidth]{figures/camera_tilt_bun.jpg}
+			\caption{Tilt response behaviour.}
+			\label{fig.lab2.tilt_camera}
+		\end{figure}
 
     \subsection{Results}
     \textbf{Lab video demonstration:}:\href{https://youtube.com/shorts/imY0JJ4vP6Q?feature=share}{Video Demonstration}

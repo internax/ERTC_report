@@ -30,18 +30,19 @@
 \contentsline {paragraph}{}{7}{section*.27}%
 \contentsline {subsection}{\numberline {3.4}Data Logging}{7}{subsection.3.4}%
 \contentsline {paragraph}{}{7}{section*.28}%
-\contentsline {subsection}{\numberline {3.5}Results}{8}{subsection.3.5}%
-\contentsline {paragraph}{}{8}{section*.31}%
-\contentsline {section}{\numberline {4}Laboratory 3}{8}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Design process}{8}{subsection.4.1}%
-\contentsline {paragraph}{}{8}{section*.32}%
-\contentsline {section}{\numberline {5}Laboratory 4}{8}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Design process}{8}{subsection.5.1}%
-\contentsline {paragraph}{}{8}{section*.33}%
-\contentsline {subsection}{\numberline {5.2}Error definition}{8}{subsection.5.2}%
-\contentsline {paragraph}{}{8}{section*.34}%
-\contentsline {subsection}{\numberline {5.3}Yaw controller Design}{9}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Design process}{11}{subsection.5.4}%
-\contentsline {paragraph}{}{11}{section*.39}%
-\contentsline {section}{\numberline {A}Section in the Appendix}{12}{appendix.A}%
-\contentsline {subsection}{\numberline {A.1}Subsection in the Appendix}{12}{subsection.A.1}%
+\contentsline {paragraph}{}{7}{section*.29}%
+\contentsline {subsection}{\numberline {3.5}Results}{9}{subsection.3.5}%
+\contentsline {paragraph}{}{9}{section*.34}%
+\contentsline {section}{\numberline {4}Laboratory 3}{9}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Design process}{9}{subsection.4.1}%
+\contentsline {paragraph}{}{9}{section*.35}%
+\contentsline {section}{\numberline {5}Laboratory 4}{9}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Design process}{9}{subsection.5.1}%
+\contentsline {paragraph}{}{9}{section*.36}%
+\contentsline {subsection}{\numberline {5.2}Error definition}{9}{subsection.5.2}%
+\contentsline {paragraph}{}{9}{section*.37}%
+\contentsline {subsection}{\numberline {5.3}Yaw controller Design}{10}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Design process}{12}{subsection.5.4}%
+\contentsline {paragraph}{}{12}{section*.42}%
+\contentsline {section}{\numberline {A}Section in the Appendix}{13}{appendix.A}%
+\contentsline {subsection}{\numberline {A.1}Subsection in the Appendix}{13}{subsection.A.1}%
