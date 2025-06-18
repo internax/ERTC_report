@@ -272,15 +272,31 @@
 \paragraph{}
 The aim of this laboratory was to implement an open-loop camera stabilization system on the TurtleBot using data from its IMU and controlling two servo motors to adjust the tilt and the pan of the camera. 
 
+    \subsection{Timer Configuration}
+    \paragraph{}
+
+    In order to get a 100Hz update frequency, we have the following timer configuration in place:
+    \begin{enumerate}
+        \item \textbf{Prescaler}: The prescaler is used to divide the input clock frequency of 96 MHz by 9600 in order to set the timer's counting frequency to 10kHz;
+        \item \textbf{Counter Period}: With the counter period of 100, we thus get the desired update frequency of $10kHz/101 \approx 100 Hz.$
+    \end{enumerate}
+
+        		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.9\textwidth]{figures/timer_config.jpg}
+			\caption{TIM6 Configuration.}
+			\label{fig.lab2.timer_config}
+		\end{figure}
+
     \subsection{IMU Data Handling}
     \paragraph{}
-    The TurtleBot is equipped with a 6-DOF IMU, comprised of a 3-axis accelerometer and 3-axis gyroscope. The accelerometer measures the linear acceleration $ [m/{s}^2] $ along the 3 axes, while the gyroscope measures angular velocity(rad/s) around these axes. The data from the two sensors is available within
+    The TurtleBot is equipped with a 6-DOF IMU, comprised of a 3-axis accelerometer and 3-axis gyroscope. The accelerometer measures the linear acceleration (m/$s^2$) along the 3 axes, while the gyroscope measures angular velocity (rad/s) around these axes. The data from the two sensors is available within
     
-    \verb|bno055_convert_double_accel_xyz_msq()| and \verb|bno055_convert_double_gyro_xyz_rps()| respectively.  The data provided by the IMU is crucial when estimating the movement and orientation of the robot, particularly for calculating the tilt as follows:
+    \verb|bno055_convert_double_accel_xyz_msq()| and \verb|bno055_convert_double_gyro_xyz_rps()|, respectively.  The data provided by the IMU is crucial when estimating the movement and orientation of the robot, particularly for calculating the tilt as follows:
 
-    \begin{equation}
+    \begin{equation*}
         \theta = sin^{-1}(\frac{a_y}{g})
-    \end{equation}
+    \end{equation*}
     where $a_y$ is the acceleration along the y axis.
 
     \subsection{Servo Control}
@@ -298,11 +314,41 @@ The aim of this laboratory was to implement an open-loop camera stabilization sy
     tilt = (int8_t)angle;
     }
     \end{lstlisting}
-    As can be seen in the code, there is a strange phenomenon where dividing the angle update formula by 10 ensures a smooth pan without the need of a filter. While this makes no sense time/frequency-wise (after having done the calculations multiple times), it does in the end provide a very smooth movement.
+    As can be seen in the code, there is a strange phenomenon where dividing the angle update formula by 10 ensures a smooth pan without the need of a filter. While this makes no sense time/frequency-wise (after having done the calculations multiple times), it does in the end provide a very smooth movement. The most probable reason is that, by reducing the amplitude of the response, some noise from the gyroscope is actually "filtered".
 
     \subsection{Data Logging}
     \paragraph{}
-    Data logging was performed via the UART interface of the STM32, while using MATLAB to receive and visualize the data in real time with the \verb|serial_datalog()| function. %TODO: introduce matlab graph
+    Data logging was performed via the UART interface of the STM32, while using MATLAB to receive and visualize the data in real time with the \verb|serial_datalog()| function. The plots for the yaw compensation and for the tilt compensation can be seen in Figure \ref{fig.lab2.yaw_plot} and Figure \ref{fig.lab2.tilt_plot}, respectively.
+
+    		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.9\textwidth]{figures/plot_yaw_1.png}
+			\caption{Yaw response behaviour.}
+			\label{fig.lab2.yaw_plot}
+		\end{figure}
+
+            \begin{figure}[H]
+			\centering
+			\includegraphics[width=0.9\textwidth]{figures/plot_tilt.png}
+			\caption{Tilt response behaviour.}
+			\label{fig.lab2.tilt_plot}
+		\end{figure}
+
+    The data above was obtained by moving the TurtleBot according to the Figure \ref{fig.lab2.yaw_camera}(data for the yaw movement) and Figure \ref{fig.lab2.tilt_camera}(data for the tilt movement), respectively.
+
+    \begin{figure}[H]
+			\centering
+			\includegraphics[width=0.9\textwidth]{figures/camera_yaw.jpg}
+			\caption{Yaw response behaviour.}
+			\label{fig.lab2.yaw_camera}
+		\end{figure}
+
+            \begin{figure}[H]
+			\centering
+			\includegraphics[width=0.9\textwidth]{figures/camera_tilt.jpg}
+			\caption{Tilt response behaviour.}
+			\label{fig.lab2.tilt_camera}
+		\end{figure}
 
     \subsection{Results}
     \textbf{Lab video demonstration:}:\href{https://youtube.com/shorts/imY0JJ4vP6Q?feature=share}{Video Demonstration}
@@ -310,8 +356,8 @@ The aim of this laboratory was to implement an open-loop camera stabilization sy
     The camera stabilization performance was captured and logged while the TurtleBot was tilted manually. As seen in the video, the servo effectively counteracts the tilt to maintain camera alignment, without the need of a complementary filter. In the event of a less fortunate camera setup, the complementary filter would have had the following form:
     \begin{equation}
         \theta_{fused} = \alpha \cdot\theta_{gyro} + (1 - \alpha) \theta_{accel}
-    \end{equation}
-    ,where $\theta_{gyro}$ and $\theta_{accel}$ are two different sensor measurements, from the gyroscope and accelerometer, respectively, thus ensuring a smoother pan.
+    \end{equation},
+    where $\theta_{gyro}$ and $\theta_{accel}$ are two different sensor measurements, from the gyroscope and accelerometer, respectively, thus ensuring a smoother pan.
     
 
 \section{Laboratory 3}

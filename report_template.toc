@@ -22,24 +22,26 @@
 \contentsline {paragraph}{}{6}{section*.22}%
 \contentsline {section}{\numberline {3}Laboratory 2}{6}{section.3}%
 \contentsline {paragraph}{}{6}{section*.23}%
-\contentsline {subsection}{\numberline {3.1}IMU Data Handling}{6}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.1}Timer Configuration}{6}{subsection.3.1}%
 \contentsline {paragraph}{}{6}{section*.24}%
-\contentsline {subsection}{\numberline {3.2}Servo Control}{6}{subsection.3.2}%
-\contentsline {paragraph}{}{6}{section*.25}%
-\contentsline {subsection}{\numberline {3.3}Data Logging}{7}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.2}IMU Data Handling}{7}{subsection.3.2}%
 \contentsline {paragraph}{}{7}{section*.26}%
-\contentsline {subsection}{\numberline {3.4}Results}{7}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.3}Servo Control}{7}{subsection.3.3}%
 \contentsline {paragraph}{}{7}{section*.27}%
-\contentsline {section}{\numberline {4}Laboratory 3}{7}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Design process}{7}{subsection.4.1}%
+\contentsline {subsection}{\numberline {3.4}Data Logging}{7}{subsection.3.4}%
 \contentsline {paragraph}{}{7}{section*.28}%
-\contentsline {section}{\numberline {5}Laboratory 4}{7}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Design process}{7}{subsection.5.1}%
-\contentsline {paragraph}{}{7}{section*.29}%
-\contentsline {subsection}{\numberline {5.2}Error definition}{7}{subsection.5.2}%
-\contentsline {paragraph}{}{7}{section*.30}%
-\contentsline {subsection}{\numberline {5.3}Yaw controller Design}{8}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Design process}{10}{subsection.5.4}%
-\contentsline {paragraph}{}{10}{section*.35}%
-\contentsline {section}{\numberline {A}Section in the Appendix}{11}{appendix.A}%
-\contentsline {subsection}{\numberline {A.1}Subsection in the Appendix}{11}{subsection.A.1}%
+\contentsline {subsection}{\numberline {3.5}Results}{9}{subsection.3.5}%
+\contentsline {paragraph}{}{9}{section*.33}%
+\contentsline {section}{\numberline {4}Laboratory 3}{9}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Design process}{9}{subsection.4.1}%
+\contentsline {paragraph}{}{9}{section*.34}%
+\contentsline {section}{\numberline {5}Laboratory 4}{9}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Design process}{9}{subsection.5.1}%
+\contentsline {paragraph}{}{9}{section*.35}%
+\contentsline {subsection}{\numberline {5.2}Error definition}{9}{subsection.5.2}%
+\contentsline {paragraph}{}{9}{section*.36}%
+\contentsline {subsection}{\numberline {5.3}Yaw controller Design}{10}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Design process}{12}{subsection.5.4}%
+\contentsline {paragraph}{}{12}{section*.41}%
+\contentsline {section}{\numberline {A}Section in the Appendix}{13}{appendix.A}%
+\contentsline {subsection}{\numberline {A.1}Subsection in the Appendix}{13}{subsection.A.1}%

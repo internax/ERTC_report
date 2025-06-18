@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.14)  18 JUN 2025 15:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.14)  18 JUN 2025 16:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -491,7 +491,7 @@ LaTeX Info: Redefining \nameref on input line 40.
 \openout3 = `report_template.out'.
 
 \c@lstlisting=\count319
-<figures/unipd-logo.png, id=88, 399.4925pt x 401.5pt>
+<figures/unipd-logo.png, id=92, 399.4925pt x 401.5pt>
 File: figures/unipd-logo.png Graphic file (type png)
 <use figures/unipd-logo.png>
 Package pdftex.def Info: figures/unipd-logo.png  used on input line 58.
@@ -510,12 +510,12 @@ l.74 \newpage
               [1] (/usr/local/texlive/2022/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
-<figures/turtlebot_1.jpg, id=127, 1842.885pt x 3276.24pt>
+<figures/turtlebot_1.jpg, id=132, 1842.885pt x 3276.24pt>
 File: figures/turtlebot_1.jpg Graphic file (type jpg)
 <use figures/turtlebot_1.jpg>
 Package pdftex.def Info: figures/turtlebot_1.jpg  used on input line 96.
 (pdftex.def)             Requested size: 241.84843pt x 429.92546pt.
-<figures/cube_ide.png, id=128, 1630.09pt x 995.72pt>
+<figures/cube_ide.png, id=133, 1630.09pt x 995.72pt>
 File: figures/cube_ide.png Graphic file (type png)
 <use figures/cube_ide.png>
 Package pdftex.def Info: figures/cube_ide.png  used on input line 103.
@@ -523,23 +523,23 @@ Package pdftex.def Info: figures/cube_ide.png  used on input line 103.
  [2 </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/turtlebot_1.jpg>]
 
 pdfTeX warning: pdflatex (file /Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/config_stm_lab1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figures/config_stm_lab1.pdf, id=138, 349.305pt x 151.5261pt>
+<figures/config_stm_lab1.pdf, id=143, 349.305pt x 151.5261pt>
 File: figures/config_stm_lab1.pdf Graphic file (type pdf)
 <use figures/config_stm_lab1.pdf>
 Package pdftex.def Info: figures/config_stm_lab1.pdf  used on input line 115.
 (pdftex.def)             Requested size: 386.95897pt x 167.86993pt.
-<figures/sx1509.png, id=141, 433.62pt x 403.5075pt>
+<figures/sx1509.png, id=146, 433.62pt x 403.5075pt>
 File: figures/sx1509.png Graphic file (type png)
 <use figures/sx1509.png>
 Package pdftex.def Info: figures/sx1509.png  used on input line 129.
 (pdftex.def)             Requested size: 290.22107pt x 270.07771pt.
 [3 </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/cube_ide.png> </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/config_stm_lab1.pdf>]
-<figures/line_sensor.png, id=165, 396.48125pt x 510.90875pt>
+<figures/line_sensor.png, id=171, 396.48125pt x 510.90875pt>
 File: figures/line_sensor.png Graphic file (type png)
 <use figures/line_sensor.png>
 Package pdftex.def Info: figures/line_sensor.png  used on input line 142.
 (pdftex.def)             Requested size: 145.11053pt x 186.99077pt.
-<figures/keypad.png, id=167, 249.93375pt x 231.86626pt>
+<figures/keypad.png, id=173, 249.93375pt x 231.86626pt>
 File: figures/keypad.png Graphic file (type png)
 <use figures/keypad.png>
 Package pdftex.def Info: figures/keypad.png  used on input line 154.
@@ -551,71 +551,102 @@ File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 205.
  [5 </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/keypad.png>]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 279.
+Overfull \hbox (7.02365pt too wide) in paragraph at lines 281--282
+[]\T1/cmr/bx/n/10 Counter Pe-riod\T1/cmr/m/n/10 : With the counter pe-riod of 100, we thus get the de-sired up-date fre-quency of $\OT1/cmr/m/n/10 10\OML/cmm/m/it/10 kHz=\OT1/cmr/m/n/10 101 \OMS/cmsy/m/n/10 ^^Y
+ []
+
+<figures/timer_config.jpg, id=221, 483.8075pt x 153.57375pt>
+File: figures/timer_config.jpg Graphic file (type jpg)
+<use figures/timer_config.jpg>
+Package pdftex.def Info: figures/timer_config.jpg  used on input line 286.
+(pdftex.def)             Requested size: 435.32422pt x 138.1893pt.
+[6 </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/timer_config.jpg>]
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 295.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-) [6] (/usr/local/texlive/2022/texmf-dist/tex/latex/ucs/data/uni-32.def
+)
+<figures/plot_yaw_1.png, id=253, 859.2903pt x 426.393pt>
+File: figures/plot_yaw_1.png Graphic file (type png)
+<use figures/plot_yaw_1.png>
+Package pdftex.def Info: figures/plot_yaw_1.png  used on input line 325.
+(pdftex.def)             Requested size: 435.32422pt x 216.01317pt.
+<figures/plot_tilt.png, id=254, 714.7503pt x 281.853pt>
+File: figures/plot_tilt.png Graphic file (type png)
+<use figures/plot_tilt.png>
+Package pdftex.def Info: figures/plot_tilt.png  used on input line 332.
+(pdftex.def)             Requested size: 435.32422pt x 171.66772pt.
+ [7 </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/plot_yaw_1.png>]
+<figures/camera_yaw.jpg, id=281, 9106.02pt x 4047.12pt>
+File: figures/camera_yaw.jpg Graphic file (type jpg)
+<use figures/camera_yaw.jpg>
+Package pdftex.def Info: figures/camera_yaw.jpg  used on input line 341.
+(pdftex.def)             Requested size: 435.32422pt x 193.47528pt.
+<figures/camera_tilt.jpg, id=282, 9106.02pt x 4047.12pt>
+File: figures/camera_tilt.jpg Graphic file (type jpg)
+<use figures/camera_tilt.jpg>
+Package pdftex.def Info: figures/camera_tilt.jpg  used on input line 348.
+(pdftex.def)             Requested size: 435.32422pt x 193.47528pt.
+ [8 </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/plot_tilt.png> </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/camera_yaw.jpg> </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/camera_tilt.jpg>] (/usr/local/texlive/2022/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 )
-<figures/yaw_error.png, id=251, 432.86719pt x 329.73187pt>
+<figures/yaw_error.png, id=294, 432.86719pt x 329.73187pt>
 File: figures/yaw_error.png Graphic file (type png)
 <use figures/yaw_error.png>
-Package pdftex.def Info: figures/yaw_error.png  used on input line 350.
+Package pdftex.def Info: figures/yaw_error.png  used on input line 396.
 (pdftex.def)             Requested size: 193.47578pt x 147.37672pt.
- [7]
-Overfull \hbox (62.174pt too wide) in paragraph at lines 381--383
+ [9 </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/yaw_error.png>]
+Overfull \hbox (62.174pt too wide) in paragraph at lines 427--429
 [][][][][][][][][][][][][][][][][][] 
  []
 
-<figures/yaw_scheme.png, id=272, 614.295pt x 212.29312pt>
+<figures/yaw_scheme.png, id=307, 614.295pt x 212.29312pt>
 File: figures/yaw_scheme.png Graphic file (type png)
 <use figures/yaw_scheme.png>
-Package pdftex.def Info: figures/yaw_scheme.png  used on input line 391.
+Package pdftex.def Info: figures/yaw_scheme.png  used on input line 437.
 (pdftex.def)             Requested size: 386.95897pt x 133.72917pt.
-[8 </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/yaw_error.png> </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/yaw_scheme.png>]
-<figures/schema_sim.png, id=288, 1368.61313pt x 603.75563pt>
+<figures/schema_sim.png, id=308, 1368.61313pt x 603.75563pt>
 File: figures/schema_sim.png Graphic file (type png)
 <use figures/schema_sim.png>
-Package pdftex.def Info: figures/schema_sim.png  used on input line 407.
+Package pdftex.def Info: figures/schema_sim.png  used on input line 453.
 (pdftex.def)             Requested size: 483.69687pt x 213.38124pt.
- [9 </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/schema_sim.png>]
-<figures/track_PSO.png, id=308, 1443.14156pt x 700.86844pt>
+[10 </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/yaw_scheme.png>] [11 </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/schema_sim.png>]
+<figures/track_PSO.png, id=344, 1443.14156pt x 700.86844pt>
 File: figures/track_PSO.png Graphic file (type png)
 <use figures/track_PSO.png>
-Package pdftex.def Info: figures/track_PSO.png  used on input line 531.
+Package pdftex.def Info: figures/track_PSO.png  used on input line 577.
 (pdftex.def)             Requested size: 386.95897pt x 187.9216pt.
- [10 </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/track_PSO.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 596--597
+ [12 </Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/figures/track_PSO.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 642--643
 []\T1/cmr/m/n/10 SX1507/SX1508/SX1509. 2025. \T1/cmr/m/it/10 Spark-fun \T1/cmr/m/n/10 [on-line]. [ac-cessed 2025-4-22]. Avail-able at:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 599--600
+Underfull \hbox (badness 10000) in paragraph at lines 645--646
 []\T1/cmr/m/n/10 Pololu line sen-sor. 2025. \T1/cmr/m/it/10 Pololu.com \T1/cmr/m/n/10 [on-line]. [ac-cessed 2025-4-22]. Avail-able at:
  []
 
-[11
+[13
 
 ] (/Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/report_template.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `report_template.out' has not changed.
-(rerunfilecheck)             Checksum: 7804DC21930A9E8C5A4D000343955F28;2697.
+(rerunfilecheck)             Checksum: B6B3D6DB86ACFD94B1E201A1CB47429C;2853.
  ) 
 Here is how much of TeX's memory you used:
- 16198 strings out of 478268
- 255811 string characters out of 5846347
- 761666 words of memory out of 5000000
- 34044 multiletter control sequences out of 15000+600000
+ 16249 strings out of 478268
+ 256957 string characters out of 5846347
+ 761948 words of memory out of 5000000
+ 34080 multiletter control sequences out of 15000+600000
  477203 words of font info for 41 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
  69i,9n,79p,614b,1859s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on "/Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/report_template.pdf" (12 pages, 2051543 bytes).
+Output written on "/Users/marektatyrek/SynologyDrive/TECHNIC/SCHOOL/VUT/PŘEDMĚTY/8.SEMESTR/EMBEDDED REAL TIME CONTROL/report_template/report_template.pdf" (14 pages, 130417137 bytes).
 PDF statistics:
- 433 PDF objects out of 1000 (max. 8388607)
- 362 compressed objects within 4 object streams
- 148 named destinations out of 1000 (max. 500000)
- 224 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 469 PDF objects out of 1000 (max. 8388607)
+ 387 compressed objects within 4 object streams
+ 158 named destinations out of 1000 (max. 500000)
+ 257 words of extra memory for PDF output out of 10000 (max. 10000000)
 
