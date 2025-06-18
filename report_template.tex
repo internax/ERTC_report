@@ -338,6 +338,214 @@ The aim of this laboratory was to implement an open-loop camera stabilization sy
 			the motor control implementation. At the time, however, we assumed the problem was in our logic. 
 			We implemented the jaw controller, without major issues. It worked as expected.
 
+        \subsection{Error definition}
+            \paragraph{}
+            For starters, let us define our yaw error:
+            \begin{equation}
+                \psi_{err} = \psi_{ref} - \psi
+            \end{equation}
+            
+        \begin{figure}[H]
+			\centering
+			\includegraphics[width=0.4\textwidth]{figures/yaw_error.png}
+			\caption{Yaw error definition}
+			\label{fig.lab4.yaw_error}
+		\end{figure}
+
+        As shown in the picture, the error that the yaw controller is receiving is made from the difference between the reference and the current error. We want that the error to be minimal.
+        It is also possible to rewrite the equation stated above with respect to the error of followin the line, namely ${e_{esl}}$.
+
+        \begin{equation}
+            \psi_{err} = arctan(\frac{e_{esl}}{H})
+        \end{equation}
+        , where H is the distance between the line sensor and the vehicle’s center, equal to 0.085 m and $e_{esl}$ is defined as:
+
+        \begin{equation}
+    e_{esl} = 
+    \begin{cases}
+    0, & \text{when the line is at the center} \\
+    > 0, & \text{when the line is on the left side of the sensor} \\
+    < 0, & \text{when the line is on the right side of the sensor}
+    \end{cases}
+    \end{equation}
+
+    Therefore, using basic mathematical knowledge, the arcatan(x) is not needed when the value of x is close to 0 (zero). In conclusion, we can define the yaw error as follows:
+    \begin{equation}
+        \psi_{err} = \frac{e_{esl}}{H};
+    \end{equation}
+
+    We implemented the yaw erorr by as follows:
+
+    \begin{lstlisting}[language=C, caption={Yaw error}, label={lst.lab4.yaw_error} ]
+    
+  trurtle_bot->TB_jaw_error = (line_attributes->distance_from_center/LINE_SENSOR_DISTANCE);
+
+    \end{lstlisting}
+
+    \subsection{Yaw controller Design}
+
+    For the design of the Yaw controller we implemented the following structure in Matlab Simulink:
+
+    \begin{figure}[H]
+			\centering
+			\includegraphics[width=0.8\textwidth]{figures/yaw_scheme.png}
+			\caption{Yaw controller}
+			\label{fig.lab4.yaw_controller}
+		\end{figure}
+    For the controller, namely $C_{\psi}$, is multiplied by the error that we have defined above. Taken this into consideration, we will define the controller of the yaw by implementing a proportional (P) control. The value of the yaw controller is defined by the variable $K_r$.
+
+    \begin{lstlisting}[language=C, caption={Yaw controller}, label={lst.lab4.yaw_controller} ]
+    
+    pid_attributes->output = pid_attributes->Kr*(TB->TB_jaw_error);
+
+    \end{lstlisting}
+
+    With everythind defined, we can introduce the Simulink model implemented by us:
+
+    \begin{figure}[H]
+			\centering
+			\includegraphics[width=1\textwidth]{figures/schema_sim.png}
+			\caption{Simulink model}
+			\label{fig.lab4.simulink}
+		\end{figure}
+
+    We can clearly see both the PID-s that are intended for controlling both of the wheels speeds. In the efforts of finding the suitable PID for both of the wheels such that the overall error is minimal, I implemented a metaheuristic method using the Matlab implemented function, namely PSO.
+    PSO stands for Particle Swarm Optimization and it is a method in which we can find the parameters of both the PID-s and the yaw controller gain by running the simulation multiple times and placing particles all over the search space.
+
+    The particles have unique attributes, such as :
+    \begin{enumerate}
+        \item they have knowledge of their position in the search space
+        \item they have knowledge of the swarms position in the search space
+        \item they have knowledge of their value
+        \item they have knowledge of the swarms values
+    \end{enumerate}
+
+    The goal of this metaheuristic is to find the global optimal value that satisfies the condition given by the user. The condition given is that we want the overall error to be minimal. This can be described as :
+    \begin{equation}
+        J = \| \psi_{error} \|;
+    \end{equation}
+
+    In this way, the goal of the algorithm is to move the particles in the search space at every iteration, then the particles, by running the simulation with the values obtained in that iteration, obtain an output that is being normalized for easier comparison. In the end, after multiple iterations, the particles should gather in a small area which in the end is the global maximum value, namely the minimal error found in the designated search space.
+
+    For the algorithm to work properly, I have implemented different intervals that the values should take. Therefore, we can run the same algorithm, but with multiple choices, building multiple configurations.
+
+    The preset configurations are :
+    \begin{enumerate}
+        \item $param_{ranges} = [
+    ap, (ap+bp)/2;  % Kp_st
+    ap, bp;  % Kp_dr
+    ai, (ai+bi)/2;  % Ki_st
+    ai, bi;  % Ki_dr
+    ad, (ad+bd)/2; % Kd_st  
+    ad, bd; % Kd_dr
+    ar,(ar+br)/2 ;% Kr
+];$
+        \item $param_{ranges} = [
+    ap, (ap+bp)/2;  % Kp_st
+    ap, bp;  % Kp_dr
+    ai, (ai+bi)/2;  % Ki_st
+    ai, bi;  % Ki_dr 
+    (ad+bd)/2, bd; % Kd_st  
+    ad, bd; % Kd_dr
+    ar,(ar+br)/2 ;% Kr
+];$
+
+\item 
+    $param_{ranges} = [
+    ap, (ap+bp)/2;  % Kp_st
+    ap, bp;  % Kp_dr
+    (ai+bi)/2, bi;  % Ki_st
+    ai, bi;  % Ki_dr
+    ad, (ad+bd)/2; % Kd_st  
+    ad, bd; % Kd_dr
+    ar,(ar+br)/2 ;% Kr
+];$
+
+\item $param_{ranges} = [
+    ap, (ap+bp)/2;  % Kp_st
+    ap, bp;  % Kp_dr
+    (ai+bi)/2, bi;  % Ki_st
+    ai, bi;  % Ki_dr
+    (ad+bd)/2, bd; % Kd_st  
+    ad, bd; % Kd_dr
+    ar,(ar+br)/2 ;% Kr
+];$
+
+\item $param_{ranges} = [
+    (ap+bp)/2, bp;  % Kp_st
+    ap, bp;  % Kp_dr
+    ai, (ai+bi)/2;  % Ki_st
+    ai, bi;  % Ki_dr
+    ad, (ad+bd)/2; % Kd_st  
+    ad, bd; % Kd_dr
+    ar,(ar+br)/2 ;% Kr  
+];$
+
+\item $param_{ranges} = [
+   (ap+bp)/2, bp;  % Kp_st
+    ap, bp;  % Kp_dr
+    ai, (ai+bi)/2;  % Ki_st
+    ai, bi;  % Ki_dr
+    (ad+bd)/2, bd; % Kd_st  
+    ad, bd; % Kd_dr
+    ar,(ar+br)/2 ;% Kr 
+];$
+
+\item $param_{ranges} = [
+    (ap+bp)/2, bp;  % Kp_st
+    ap, bp;  % Kp_dr
+    (ai+bi)/2, bi;  % Ki_st
+    ai, bi;  % Ki_dr
+    ad, (ad+bd)/2; % Kd_st  
+    ad, bd; % Kd_dr
+    ar,(ar+br)/2 ;% Kr
+];$
+
+\item $param_{ranges} = [
+    (ap+bp)/2, bp;  % Kp_st
+    ap, bp;  % Kp_dr
+    (ai+bi)/2, bi;  % Ki_st
+    ai, bi;  % Ki_dr
+    (ad+bd)/2, bd; % Kd_st  
+    ad, bd; % Kd_dr
+    ar,(ar+br)/2 ;% Kr
+];$
+    \end{enumerate}
+
+    $a_p $and $b_p$ are the intervals for the Proportional gain, $a_i $and $b_i$ are the intervals for the Integral gain, $a_d$ and $b_d$ are the intervals for the Derivative gain and $a_r$ and $b_r$ are the intervals for the Yaw controller gain.
+
+    After simulating all the configurations, we have come up with these values:
+    
+    \begin{enumerate}
+        \item $K^p_{left} = 5,46$
+        \item $K^p_{right} = 5.193$
+        \item $K^i_{left} = 51.276$
+        \item $K^i_{right} = 47.853$
+        \item $K^d_{left} = 0.505$
+        \item $K^d_{right} = 0.488$
+        \item $K_r = 1095$
+    \end{enumerate}
+
+    \begin{figure}[H]
+			\centering
+			\includegraphics[width=0.8\textwidth]{figures/track_PSO.png}
+			\caption{Output with Input}
+			\label{fig.lab4.output}
+		\end{figure}
+
+    As we can see, the output perfectly tracks the the step reference with these values. Taking this into account, we call it a success in tracking the step reference. Although, by testing these values on the bot, we could not get the results that we were hoping for. I think this is to the fact that the reference is different or the sensor does not read as the simulation intends.
+
+		\subsection{Design process}
+			\paragraph{}
+			At first, we tried to implement a simple approach, but it did not work as we expected.
+			The idea was to split the left and right side of the sensor into two separate arrays, 
+			giving us two values. Each value represented the occupancy of one half of the sensor. 
+			We then subtracted these values to get an error — ideally close to zero. 
+
+			In hindsight, our implementation may not have been flawed, the real issue was likely 
+			the motor control implementation. At the time, however, we assumed the problem was in our logic. 
+			We implemented the jaw controller, without major issues. It worked as expected.
+
 % \begin{figure}[!ht]
 % 	\centering
 % 	\subfloat[The TurtleBot 1 ]

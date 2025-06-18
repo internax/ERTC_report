@@ -36,5 +36,10 @@
 \contentsline {section}{\numberline {5}Laboratory 4}{7}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Design process}{7}{subsection.5.1}%
 \contentsline {paragraph}{}{7}{section*.29}%
-\contentsline {section}{\numberline {A}Section in the Appendix}{8}{appendix.A}%
-\contentsline {subsection}{\numberline {A.1}Subsection in the Appendix}{8}{subsection.A.1}%
+\contentsline {subsection}{\numberline {5.2}Error definition}{7}{subsection.5.2}%
+\contentsline {paragraph}{}{7}{section*.30}%
+\contentsline {subsection}{\numberline {5.3}Yaw controller Design}{8}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Design process}{10}{subsection.5.4}%
+\contentsline {paragraph}{}{10}{section*.35}%
+\contentsline {section}{\numberline {A}Section in the Appendix}{11}{appendix.A}%
+\contentsline {subsection}{\numberline {A.1}Subsection in the Appendix}{11}{subsection.A.1}%
