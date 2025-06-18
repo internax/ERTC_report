@@ -1,0 +1,2 @@
+../Core/Src/cobs.c:15:6:cobsEncode	40	static
+../Core/Src/cobs.c:39:6:cobsDecode	40	static

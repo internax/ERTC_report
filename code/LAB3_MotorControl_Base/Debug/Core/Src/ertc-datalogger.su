@@ -1,0 +1,2 @@
+../Core/Src/ertc-datalogger.c:13:5:ertc_dlog_send	24	static
+../Core/Src/ertc-datalogger.c:28:5:ertc_dlog_update	16	static
